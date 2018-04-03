@@ -1,7 +1,5 @@
 ## Rocket Project
 
-***
-
 Сборка:
 
 `npm run dev` - gulp dev (development mode)
