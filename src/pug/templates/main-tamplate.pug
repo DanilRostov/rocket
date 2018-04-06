@@ -1,0 +1,39 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width" initial-scale="1.0")
+		block title
+		link(rel="stylesheet", href="css/style.css")
+	body
+
+		//- Block Header
+		include ../mixins/menu.pug
+		header.header
+			div.header__container
+				a(href="index.html").header__logo ракета
+				div.header__menu.menu
+					block menu
+				a.header__order(href="#estimate") оставить заявку
+		
+		//- Block Page-Content
+		block page-content
+
+		//- Block Footer
+		footer.footer
+			div.footer__container
+				div.footer__top
+					a(href="index.html").footer__logo ракета
+					div.footer__contacts
+						div.footer__number 555-55-55-55
+						div.footer__email raketa@email.com
+				div.footer__bottom
+					div.footer__pp
+						| © Ракета
+						br
+						| Политика конфиденциальности
+					div.footer__menu.menu
+						block menu
+					a(href="#estimate").footer__order оставить заявку
+					
+					

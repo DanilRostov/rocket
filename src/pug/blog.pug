@@ -1,0 +1,12 @@
+extends templates/main-tamplate.pug
+
+block title
+	title Rocket - Блог
+
+block menu
+	-var selected = 'блог';
+	+menu(selected)
+
+block page-content
+	section.content
+		h2 Контент страницы блог

@@ -1,0 +1,13 @@
+extends templates/main-tamplate.pug
+
+block title
+	title Rocket - Главная
+
+block menu
+	-var selected = 'о нас';
+	+menu(selected)
+
+block page-content
+	section.content
+		h2 Контент главной страницы
+

@@ -4,9 +4,7 @@
   "description": "Rocket Project",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build",
-    "server": "gulp server"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,5 +15,26 @@
   "bugs": {
     "url": "https://github.com/DanilRostov/rocket/issues"
   },
-  "homepage": "https://github.com/DanilRostov/rocket#readme"
+  "homepage": "https://github.com/DanilRostov/rocket#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browser-sync": "^2.23.6",
+    "css-mqpacker": "^6.0.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-wait": "0.0.2",
+    "imagemin-pngquant": "^5.1.0",
+    "postcss-object-fit-images": "^1.1.2"
+  }
 }

@@ -1,0 +1,76 @@
+// Сброс основных стилей
+body {	margin: 0; width: 100%; }
+* {	box-sizing: border-box; }
+img { vertical-align: top; }
+h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
+
+// Сброс стилей для a и button
+a, a:hover, a:active, a:visited, a:focus,
+button, button:hover, button:active, button:visited, button:focus {
+	text-decoration: none;
+	outline: 0;
+}
+
+// Цвет placeholder в input
+input::-webkit-input-placeholder { color:#fff; font-style: italic; }
+input::-moz-placeholder { color:#fff; font-style: italic; }
+input:-moz-placeholder { color:#fff; font-style: italic; }
+input:-ms-input-placeholder { color:#fff; font-style: italic; }
+
+// Цвет placeholder в textarea
+textarea::-webkit-input-placeholder { color:$color-grey; }
+textarea::-moz-placeholder          { color:$color-grey; }
+textarea:-moz-placeholder           { color:$color-grey; }
+textarea:-ms-input-placeholder      { color:$color-grey; }
+
+// Фон autofill в input и textarea 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);  
+}
+
+// Убрать resize в textarea
+textarea {
+    resize:none;
+}
+
+// Кастомный скролл
+::-webkit-scrollbar-button {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 0px
+}
+
+::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	background-color: $color-blue;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	opacity: $color-grey;
+}
+
+::-webkit-resizer{
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 0px;
+}
+
+::-webkit-scrollbar{
+	width: 7px;
+}

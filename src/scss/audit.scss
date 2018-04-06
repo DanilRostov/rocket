@@ -1,0 +1,303 @@
+// Block About-audit
+.about-audit {
+	padding: 170px 0 100px;
+
+	&__container {
+		@include container();
+	}
+
+	&__title {
+		@include title();
+	}
+
+	&__text {
+		margin-top: 65px;
+		font-size: 25px;
+		font-family: $ff-msc;
+	}
+
+	&__order {
+		margin-top: 80px;
+		display: inline-block;
+		padding: 20px 30px;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 900;
+		color: $color-blue;
+		font-family: $ff-msc;
+		border: 3px solid $color-blue;
+
+		&:hover {
+			color: #fff;
+			background: $bg-gradient;
+		}
+	}
+}
+
+// Block Tech-audit
+.tech-audit {
+	padding: 100px 0 55px;
+
+	&__container {
+		@include container();
+	}
+
+	&__title {
+		@include title();
+	}
+
+	&__text {
+		margin-top: 55px;
+		font-size: 25px;
+		font-family: $ff-os;
+	}
+}
+
+// Block Metriks
+.metriks {
+	padding: 55px 0 60px;
+
+	&__container {
+		@include container();
+	}
+
+	&__title {
+		@include title();
+	}
+
+	&__items-box {
+		margin-top: 35px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		margin-top: 35px;
+		width: 30%;
+		padding: 30px 10px;
+		background: $bg-gradient;
+		border: 4px solid $color-blue;
+	}
+
+	&__item-title {
+		text-align: center;
+		font-size: 18px;
+		height: 45px;
+		font-family: $ff-msc;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	&__item-text-box {
+		margin-top: 30px;
+		padding: 0 20px;
+	}
+
+	&__item-text {
+		margin-top: 10px;
+		font-family: $ff-msc;
+		font-size: 15px;
+		color: #fff;
+	}
+}
+
+// Block - Tarifs
+.tarifs {
+	padding: 60px 0 45px;
+
+	&__container {
+		@include container();
+	}
+
+	&__title {
+		@include title();
+	}
+
+	&__subtitle {
+		@include subtitle();
+	}
+
+	&__items-box {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		width: 47%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 45px 30px;
+		background: $bg-gradient;
+		border: 1px solid $color-grey;
+	}
+
+	&__item-title {
+		text-align: center;
+		font-size: 40px;
+		font-family: $ff-os;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	&__item-text-box {
+		margin-top: 40px;
+		flex-grow: 1;
+	}
+
+	&__item-text {
+		font-size: 24px;
+		color: #fff;
+		font-family: $ff-os;
+	}
+
+	&__item-price-box {
+		margin-top: 40px;
+		padding-top: 25px;
+		border-top: 3px solid #fff;
+	}
+	
+	&__item-price-text-box {
+		margin-top: 5px;
+		position: relative;
+
+		& object {
+			position: absolute;
+			left: 0;
+			top: 10px;
+		}
+	}
+
+	&__item-price-text {
+		margin-left: 60px;
+		font-size: 38px;
+		font-family: $ff-os;
+		color: #fff;
+	}
+}
+
+// Block Estimate
+.estimate {
+	padding: 45px 0 120px;
+
+	&__container {
+		@include container();
+	}
+
+	&__title {
+		@include title();
+	}
+
+	&__subtitle {
+		@include subtitle();
+	}
+
+	&__form {
+		margin-top: 90px;
+		padding: 0 20% 75px;
+		display: flex;
+		flex-direction: column;
+		background: $bg-gradient;
+	}
+
+	&__form-input {
+		margin-top: 50px;
+		font-size: 20px;
+		font-family: $ff-os;
+		font-style: italic;
+		color: #fff;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid #fff;
+		outline: none;
+		text-indent: 30px;
+		padding-bottom: 10px;
+	}
+
+	&__form-comment {
+		margin-top: 65px;
+		padding: 15px 35px;
+		font-size: 20px;
+		color: $color-grey;
+		font-family: $ff-os;
+		font-style: italic;
+		background: #fff;
+		opacity: 0.6;
+		border: none;
+		outline: none;
+	}
+	
+	&__form-checkbox-box {
+		margin-top: 50px;
+		position: relative;
+		text-align: center;
+	}
+
+	&__form-checkbox-pi {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+		& + label {
+		  	position: relative;
+		  	cursor: pointer;
+
+		  	&:before {
+		  		content: '';
+			  	position: absolute;
+			  	top: -4px;
+			  	left: 0;
+			  	width: 18px;
+			  	height: 18px;
+			  	background: #fff;
+			  	border: 1px solid $color-grey;
+			  	transition: .2s;
+		  	}
+
+		  	&:after {
+		  		content: '';
+				position: absolute;
+				top: 0;
+				left: 4px;
+				width: 12px;
+				height: 12px;
+				background: $color-blue;
+				opacity: 0;
+				transition: all 150ms ease;
+		  	}
+		}
+
+		&:checked + label:after {
+			opacity: 1;
+		}
+	}
+
+	&__form-checkbox-pi-text {
+		margin-left: 30px;
+		font-size: 20px;
+		color: #fff;
+		font-family: $ff-os;
+	}
+
+	&__form-submit {
+		margin: 50px auto 0;
+		padding: 20px 90px;
+		border: 4px solid #fff;
+		background: transparent;
+		color: #fff;
+		font-size: 20px;
+		font-family: $ff-msc;
+		text-transform: uppercase;
+		cursor: pointer;
+
+		&:hover {
+			background: $bg-gradient;
+		}
+	}
+}
+
+
+

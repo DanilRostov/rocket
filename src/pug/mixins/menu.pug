@@ -1,0 +1,12 @@
+mixin menu(selected)
+
+	-
+		var menu = {
+			'о нас': "/index.html",
+			'аудит': "/audit.html",
+			'вёрстка': "/frontend.html",
+			'блог': "/blog.html"
+		};
+
+	each val, key in menu
+		a(class= selected.toLowerCase() === key.toLowerCase() ? 'menu__link  menu__link--active' : 'menu__link' href=val, title=key)= key
