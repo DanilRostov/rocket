@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" initial-scale="1.0">
   <title>Rocket - Аудит</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__container">
       <a class="header__logo" href="index.html">ракета</a>
       <div class="header__menu menu">
@@ -21,11 +21,15 @@
       <a class="header__order" href="#estimate">оставить заявку</a>
     </div>
   </header>
+  <a class="icon-scroll-up" href="#header"></a>
   <section class="about-audit">
     <div class="about-audit__container">
       <h2 class="about-audit__title">Аудит</h2>
       <p class="about-audit__text">это проверка сайта на соответствие тем или иным требованиям. <br>Зачастую такие аудиты направлены на SEO оптимизацию или UX <br>юзабилити интерфейсов. Мы хотим копнуть глубже.</p>
       <a class="about-audit__order" href="#">работать с нами</a>
+      <img class="about-audit__planet1" src="img/background/planet1.png" alt="planet1">
+      <img class="about-audit__planet2" src="img/background/planet2.png" alt="planet2">
+      <img class="about-audit__planet3" src="img/background/planet3.png" alt="planet3">
     </div>
   </section>
   <section class="tech-audit">
@@ -128,6 +132,7 @@
       <h2 class="estimate__title">Работать с нами</h2>
       <h3 class="estimate__subtitle">Осмечиваем проект любой сложности в течении 24 часов</h3>
       <form class="estimate__form">
+        <img class="estimate__form-planet" src="img/background/planet4.png" alt="planet4">
         <input class="estimate__form-input" name="name" type="text" placeholder="Имя">
         <input class="estimate__form-input" name="phone" type="tel" placeholder="Телефон">
         <input class="estimate__form-input" name="email" type="email" placeholder="E-mail">
@@ -160,6 +165,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

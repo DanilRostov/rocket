@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" initial-scale="1.0">
   <title>Rocket - Блог</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__container">
       <a class="header__logo" href="index.html">ракета</a>
       <div class="header__menu menu">
@@ -21,8 +21,11 @@
       <a class="header__order" href="#estimate">оставить заявку</a>
     </div>
   </header>
+  <a class="icon-scroll-up" href="#header"></a>
   <section class="content">
-    <h2>Контент страницы блог</h2>
+    <div class="content__container">
+      <img src="img/page-placeholders/blog.jpg" alt="placeholder">
+    </div>
   </section>
   <footer class="footer">
     <div class="footer__container">
@@ -45,6 +48,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

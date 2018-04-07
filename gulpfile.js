@@ -21,8 +21,8 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
-// const uglify = require('gulp-uglify');
-// const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 // const cheerio = require('gulp-cheerio');
 // const svgstore = require('gulp-svgstore');
 // const svgmin = require('gulp-svgmin');
@@ -94,19 +94,13 @@ gulp.task( 'fonts', () => {
 
 
 // Конкатенация и углификация Javascript
-// gulp.task('js', function () {
-// 	if(jsList.length) {
-// 		return gulp.src(jsList)
-// 			.pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
-// 			.pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем
-// 			.pipe(uglify())                                       // сжимаем
-// 			.pipe(gulp.dest(dirs.build + '/js'));                 // записываем
-// 	}
-// 	else {
-// 		console.log('Javascript не обрабатывается');
-// 		callback();
-// 	}
-// });
+gulp.task('js', () => {
+	return gulp.src( `${dirs.source}/js/*.js` )
+		.pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+		.pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем
+		// .pipe(uglify())                                       // сжимаем
+		.pipe(gulp.dest( `${dirs.dist}/js` ));                 // записываем
+});
 
 // Очистка dist перед сборкой
 gulp.task( 'clean', () => {
@@ -132,7 +126,7 @@ gulp.task( 'build', ( callback ) => {
 	gulpSequence(
 		'clean',
 		'img',
-		[ 'style', 'fonts' ],
+		[ 'style', 'fonts', 'js' ],
 		'pug',
 		callback
 	);
@@ -169,16 +163,16 @@ gulp.task( 'serve', [ 'build' ], () => {
 	gulp.watch(dirs.source + '/fonts/*.{ttf,woff,woff2,eot,svg}', ['watch:fonts']);
 
 	// Слежение за JS
-	// if(jsList.length) {
-	// 	gulp.watch(jsList, ['watch:js']);
-	// }
+	gulp.watch([
+		dirs.source + '/js/*.js'
+	], [ 'watch:js' ]);
 });
 
 // Браузерсинк
 gulp.task('watch:pug', ['pug'], reload);
 gulp.task('watch:img', ['img'], reload);
 gulp.task('watch:fonts', ['fonts'], reload);
-// gulp.task('watch:js', ['js'], reload);
+gulp.task('watch:js', ['js'], reload);
 
 
 // Перезагрузка браузера
@@ -187,9 +181,9 @@ function reload (done) {
 	done();
 }
 
-let onError = ( err ) => {
+let onError = function (err) {
 	notify.onError({
 		title: 'Error in ' + err.plugin,
 	})( err );
-	this.emit( 'end' );
+	this.emit('end');
 };

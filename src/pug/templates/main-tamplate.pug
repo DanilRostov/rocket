@@ -4,18 +4,21 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width" initial-scale="1.0")
 		block title
-		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/style.min.css")
 	body
-
+		
 		//- Block Header
 		include ../mixins/menu.pug
-		header.header
+		header#header.header
 			div.header__container
 				a(href="index.html").header__logo ракета
 				div.header__menu.menu
 					block menu
 				a.header__order(href="#estimate") оставить заявку
 		
+		//- Icon Scroll Up
+		a(href="#header").icon-scroll-up
+
 		//- Block Page-Content
 		block page-content
 
@@ -35,5 +38,7 @@ html(lang="ru")
 					div.footer__menu.menu
 						block menu
 					a(href="#estimate").footer__order оставить заявку
-					
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="js/script.min.js")
 					

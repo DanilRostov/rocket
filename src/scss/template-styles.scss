@@ -3,7 +3,6 @@
 	padding: 30px 0;
 	
 	&__container {
-		@include container();
 		height: 56px;
 		display: flex;
 		justify-content: space-between;
@@ -47,6 +46,27 @@
 			background: $bg-gradient;
 		}
 	}
+
+	@media screen and(min-width: 1170px) {
+		&__container {
+			@include container1170();
+		}
+	}
+}
+
+// Scroll up
+.icon-scroll-up {
+	position: fixed;
+	display: inline-block;
+	opacity: 0;
+	background: url('../img/icon-scroll-up.png');
+	width: 107px;
+	height: 107px;
+	right: 7%;
+    bottom: 10%;
+    z-index: -999;
+    cursor: pointer;
+    transition: all 250ms ease;
 }
 
 // Block Menu
@@ -90,7 +110,6 @@
 	background: $bg-gradient;
 
 	&__container {
-		@include container();
 		padding: 30px 0;
 	}
 	
@@ -166,5 +185,11 @@
 		color: #fff;
 		font-family: $ff-msc;
 		border: 3px solid #fff;
+	}
+
+	@media screen and(min-width: 1170px) {
+		&__container {
+			@include container1170();
+		}
 	}
 }
