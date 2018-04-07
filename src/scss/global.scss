@@ -1,8 +1,13 @@
 // Сброс основных стилей
-body {	margin: 0; width: 100%; }
+body {	margin: 0; width: 100%;}
 * {	box-sizing: border-box; }
 img { vertical-align: top; }
 h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
+
+.position-fixed {
+	position: fixed;
+	background-color: #000;
+}
 
 // Сброс стилей для a и button
 a, a:hover, a:active, a:visited, a:focus,

@@ -13,6 +13,10 @@ h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0; }
 
+.position-fixed {
+  position: fixed;
+  background-color: #000; }
+
 a, a:hover, a:active, a:visited, a:focus,
 button, button:hover, button:active, button:visited, button:focus {
   text-decoration: none;
@@ -90,6 +94,7 @@ textarea {
 .header {
   padding: 30px 0; }
   .header__container {
+    padding: 0 15px;
     height: 56px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -115,10 +120,9 @@ textarea {
     background: linear-gradient(45deg, #8D32F4, #32B3F4);
     border: 4px solid #3989F5; }
   .header__menu {
+    position: absolute;
     margin-right: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -134,6 +138,7 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -148,6 +153,43 @@ textarea {
     .header__order:hover {
       color: #fff;
       background: linear-gradient(45deg, #8D32F4, #32B3F4); }
+  .header__burger {
+    position: relative;
+    width: 54px;
+    height: 100%; }
+    .header__burger input {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      cursor: pointer;
+      margin: 0; }
+      .header__burger input:checked + span {
+        background: transparent; }
+        .header__burger input:checked + span:after {
+          -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                  transform: rotate(45deg) translate(-8px, -8px); }
+        .header__burger input:checked + span:before {
+          -webkit-transform: rotate(-45deg) translate(-12px, 12px);
+                  transform: rotate(-45deg) translate(-12px, 12px); }
+    .header__burger span {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #707070;
+      margin-top: 30px; }
+      .header__burger span:before, .header__burger span:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #707070;
+        top: -15px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+      .header__burger span:after {
+        top: 15px; }
 
 .icon-scroll-up {
   position: fixed;
@@ -156,7 +198,7 @@ textarea {
   background: url("../img/icon-scroll-up.png");
   width: 107px;
   height: 107px;
-  right: 30%;
+  right: 3%;
   bottom: 10%;
   z-index: -999;
   cursor: pointer;
@@ -164,6 +206,7 @@ textarea {
   transition: all 250ms ease; }
 
 .menu__link {
+  width: 100%;
   position: relative;
   margin-right: 40px;
   font-size: 18px;
@@ -191,11 +234,16 @@ textarea {
   .menu__link--active {
     color: #3989F5;
     opacity: 1; }
+  .menu__link--mobile {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 40px; }
 
 .footer {
   background: linear-gradient(45deg, #8D32F4, #32B3F4); }
   .footer__container {
-    padding: 30px 0; }
+    padding: 30px 0;
+    padding: 0 15px; }
   .footer__top {
     width: 100%;
     display: -webkit-box;
@@ -282,7 +330,8 @@ textarea {
   background-position: 100%;
   overflow: hidden; }
   .about-audit__container {
-    position: relative; }
+    position: relative;
+    padding: 0 15px; }
   .about-audit__title {
     font-size: 40px;
     font-family: "Open Sans", sans-serif;
@@ -309,12 +358,13 @@ textarea {
   .about-audit__planet1 {
     position: absolute;
     top: -115px;
-    left: -25px; }
+    left: 0; }
   .about-audit__planet2 {
     position: absolute;
     top: -160px;
     right: -100px; }
   .about-audit__planet3 {
+    display: none;
     position: absolute;
     top: 30px;
     right: -125px; }
@@ -322,6 +372,8 @@ textarea {
 .tech-audit {
   margin-top: -150px;
   padding: 100px 0 55px; }
+  .tech-audit__container {
+    padding: 0 15px; }
   .tech-audit__title {
     font-size: 40px;
     font-family: "Open Sans", sans-serif;
@@ -339,6 +391,8 @@ textarea {
   background-repeat: no-repeat;
   background-size: 550px;
   background-position: 0px 450px; }
+  .metriks__container {
+    padding: 0 15px; }
   .metriks__title {
     font-size: 40px;
     font-family: "Open Sans", sans-serif;
@@ -350,6 +404,10 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -357,7 +415,7 @@ textarea {
         flex-wrap: wrap; }
   .metriks__item {
     margin-top: 35px;
-    width: 30%;
+    width: 100%;
     padding: 30px 10px;
     background: linear-gradient(45deg, #8D32F4, #32B3F4);
     border: 4px solid #3989F5; }
@@ -380,6 +438,8 @@ textarea {
 .tarifs {
   margin-top: -830px;
   padding: 60px 0 45px; }
+  .tarifs__container {
+    padding: 0 15px; }
   .tarifs__title {
     font-size: 40px;
     font-family: "Open Sans", sans-serif;
@@ -397,11 +457,15 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .tarifs__item {
-    width: 47%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -449,6 +513,8 @@ textarea {
 
 .estimate {
   padding: 45px 0 120px; }
+  .estimate__container {
+    padding: 0 15px; }
   .estimate__title {
     font-size: 40px;
     font-family: "Open Sans", sans-serif;
@@ -557,8 +623,21 @@ textarea {
     .header__container {
       width: 1170px;
       margin: 0 auto; }
+    .header__menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: static; }
+    .header__order {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .header__burger {
+      display: none; }
     .icon-scroll-up {
       right: 7%; }
+  .menu__link {
+    width: auto; }
     .footer__container {
       width: 1170px;
       margin: 0 auto; }
@@ -573,15 +652,33 @@ textarea {
     .about-audit__container {
       width: 1170px;
       margin: 0 auto; }
+    .about-audit__planet1 {
+      left: -25px; }
+    .about-audit__planet3 {
+      display: block; }
     .tech-audit__container {
       width: 1170px;
       margin: 0 auto; }
     .metriks__container {
       width: 1170px;
       margin: 0 auto; }
+    .metriks__items-box {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .metriks__item {
+      width: 30%; }
     .tarifs__container {
       width: 1170px;
       margin: 0 auto; }
+    .tarifs__items-box {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .tarifs__item {
+      width: 47%; }
     .tarifs__item-price-text {
       font-size: 38px; }
     .estimate__container {

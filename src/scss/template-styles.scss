@@ -3,6 +3,7 @@
 	padding: 30px 0;
 	
 	&__container {
+		@include container();
 		height: 56px;
 		flex-wrap: wrap;
 		display: flex;
@@ -23,8 +24,9 @@
 	}
 
 	&__menu {
+		position: absolute;
 		margin-right: 20px;
-		display: flex;
+		display: none;
 		justify-content: flex-end;
 		flex-wrap: wrap;
 		align-items: center;
@@ -33,6 +35,7 @@
 
 	&__order {
 		display: flex;
+		display: none;
     	align-items: center;
 		height: 100%;
 		padding: 0 35px 0;
@@ -49,13 +52,75 @@
 		}
 	}
 
+	&__burger {
+		position: relative;
+		width: 54px;
+		height: 100%;
+
+		input {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			opacity: 0;
+			cursor: pointer;
+			margin: 0;
+
+			&:checked {
+				+ span {
+					background: transparent;
+
+					&:after {
+						transform: rotate(45deg) translate(-8px, -8px);
+					}
+
+					&:before {
+						transform: rotate(-45deg) translate(-12px, 12px);
+					}
+				}
+			}
+		}
+
+		span {
+			position: absolute;
+			width: 100%;
+			height: 3px;
+			background: $color-grey;
+			margin-top: 30px;
+
+			&:before, 
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				background: $color-grey;
+				top: -15px;
+				transition: 0.3s;
+			}
+
+			&:after {
+				top: 15px;
+			}
+		}
+	}
+
 	@media screen and(min-width: 1170px) {
 		&__container {
 			@include container1170();
 		}
 
 		&__menu {
+			display: flex;
+			position: static;
+		}
 
+		&__order {
+			display: flex;
+		}
+
+		&__burger {
+			display: none;
 		}
 	}
 }
@@ -68,7 +133,7 @@
 	background: url('../img/icon-scroll-up.png');
 	width: 107px;
 	height: 107px;
-	right: 30%;
+	right: 3%;
     bottom: 10%;
     z-index: -999;
     cursor: pointer;
@@ -85,6 +150,7 @@
 .menu {
 
 	&__link {
+		width: 100%;
 		position: relative;
 		margin-right: 40px;
 		font-size: 18px;
@@ -114,6 +180,18 @@
 			color: $color-blue;
 			opacity: 1;
 		}
+
+		&--mobile {
+			margin-top: 15px;
+			color: #fff;
+			font-size: 40px;
+		}
+	}
+
+	@media screen and(min-width: 1170px) {
+		&__link {
+			width: auto;
+		}
 	}
 }
 
@@ -123,6 +201,7 @@
 
 	&__container {
 		padding: 30px 0;
+		@include container();
 	}
 	
 	&__top {
