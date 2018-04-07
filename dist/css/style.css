@@ -91,6 +91,8 @@ textarea {
   padding: 30px 0; }
   .header__container {
     height: 56px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -120,6 +122,8 @@ textarea {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -152,7 +156,7 @@ textarea {
   background: url("../img/icon-scroll-up.png");
   width: 107px;
   height: 107px;
-  right: 7%;
+  right: 30%;
   bottom: 10%;
   z-index: -999;
   cursor: pointer;
@@ -201,6 +205,7 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .footer__logo {
+    display: none;
     height: 100%;
     padding: 5px 30px;
     text-transform: uppercase;
@@ -228,13 +233,12 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .footer__pp {
+    display: none;
     font-size: 20px;
     font-family: "Open Sans", sans-serif;
     color: #fff; }
   .footer__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -439,7 +443,7 @@ textarea {
       top: 10px; }
   .tarifs__item-price-text {
     margin-left: 60px;
-    font-size: 38px;
+    font-size: 26px;
     font-family: "Open Sans", sans-serif;
     color: #fff; }
 
@@ -539,7 +543,7 @@ textarea {
     font-family: "Open Sans", sans-serif; }
   .estimate__form-submit {
     margin: 50px auto 0;
-    padding: 20px 90px;
+    padding: 0;
     border: 4px solid #fff;
     background: transparent;
     color: #fff;
@@ -553,9 +557,19 @@ textarea {
     .header__container {
       width: 1170px;
       margin: 0 auto; }
+    .icon-scroll-up {
+      right: 7%; }
     .footer__container {
       width: 1170px;
       margin: 0 auto; }
+    .footer__logo {
+      display: block; }
+    .footer__pp {
+      display: block; }
+    .footer__menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
     .about-audit__container {
       width: 1170px;
       margin: 0 auto; }
@@ -568,8 +582,12 @@ textarea {
     .tarifs__container {
       width: 1170px;
       margin: 0 auto; }
+    .tarifs__item-price-text {
+      font-size: 38px; }
     .estimate__container {
       width: 1170px;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+    .estimate__form-submit {
+      padding: 20px 90px; } }
 
 /*# sourceMappingURL=style.css.map */

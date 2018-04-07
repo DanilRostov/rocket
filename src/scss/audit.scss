@@ -220,7 +220,7 @@
 
 	&__item-price-text {
 		margin-left: 60px;
-		font-size: 38px;
+		font-size: 26px;
 		font-family: $ff-os;
 		color: #fff;
 	}
@@ -228,6 +228,10 @@
 	@media screen and(min-width: 1170px) {
 		&__container {
 			@include container1170();
+		}
+
+		&__item-price-text {
+			font-size: 38px;
 		}
 	}
 }
@@ -345,7 +349,7 @@
 
 	&__form-submit {
 		margin: 50px auto 0;
-		padding: 20px 90px;
+		padding: 0;
 		border: 4px solid #fff;
 		background: transparent;
 		color: #fff;
@@ -362,6 +366,10 @@
 	@media screen and(min-width: 1170px) {
 		&__container {
 			@include container1170();
+		}
+
+		&__form-submit {
+			padding: 20px 90px;
 		}
 	}
 }

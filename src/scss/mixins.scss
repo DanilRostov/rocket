@@ -1,3 +1,7 @@
+@mixin container() {
+	width: 100%;
+}
+
 @mixin container1170() {
 	width: 1170px;
 	margin: 0 auto;

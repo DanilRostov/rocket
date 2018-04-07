@@ -4,6 +4,7 @@
 	
 	&__container {
 		height: 56px;
+		flex-wrap: wrap;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -25,6 +26,7 @@
 		margin-right: 20px;
 		display: flex;
 		justify-content: flex-end;
+		flex-wrap: wrap;
 		align-items: center;
 		flex-grow: 1;
 	}
@@ -51,6 +53,10 @@
 		&__container {
 			@include container1170();
 		}
+
+		&__menu {
+
+		}
 	}
 }
 
@@ -62,11 +68,17 @@
 	background: url('../img/icon-scroll-up.png');
 	width: 107px;
 	height: 107px;
-	right: 7%;
+	right: 30%;
     bottom: 10%;
     z-index: -999;
     cursor: pointer;
     transition: all 250ms ease;
+
+    @media screen and (min-width: 1170px) {
+    	& {
+    		right: 7%;
+    	}
+    }
 }
 
 // Block Menu
@@ -120,6 +132,7 @@
 	}
 
 	&__logo {
+		display: none;
 		height: 100%;
 		padding: 5px 30px;
 		text-transform: uppercase;
@@ -151,13 +164,14 @@
 	}
 
 	&__pp {
+		display: none;
 		font-size: 20px;
 		font-family: $ff-os;
 		color: #fff;
 	}
 
 	&__menu {
-		display: flex;
+		display: none;
 		flex-grow: 1;
 		justify-content: flex-end;
 		align-items: flex-end;
@@ -190,6 +204,18 @@
 	@media screen and(min-width: 1170px) {
 		&__container {
 			@include container1170();
+		}
+
+		&__logo {
+			display: block;
+		}
+
+		&__pp {
+			display: block;
+		}
+
+		&__menu {
+			display: flex;
 		}
 	}
 }
