@@ -460,9 +460,12 @@
 		text-transform: uppercase;
 		cursor: pointer;
 		border-radius: 0;
+		transition: all 200ms ease;
 
 		&:hover {
-			background: $bg-gradient;
+			background: #fff;
+			color: $color-blue;
+			border: 4px solid $color-blue;
 		}
 	}
 

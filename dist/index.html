@@ -73,6 +73,40 @@
   <section class="reviews">
     <div class="reviews__container">
       <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide reviews__slide"> <span class="reviews__slide-text">«Чувственнная вёрстка»</span><span class="reviews__slide-author">Василий Пупкин</span><span class="reviews__slide-company">Интернет-магазин</span></div>
+          <div class="swiper-slide reviews__slide"><span class="reviews__slide-text">«Чётче не бывает»</span><span class="reviews__slide-author">Мария Федорова</span><span class="reviews__slide-company">агенство "Лунный свет"</span></div>
+          <div class="swiper-slide reviews__slide"><span class="reviews__slide-text">«Неожиданно хорошо»</span><span class="reviews__slide-author">Василий Пупкин</span><span class="reviews__slide-company">дизайн-студия "Магнификат"</span></div>
+        </div>
+        <div class="reviews__slider-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="about-us">
+    <div class="about-us__container">
+      <h2 class="about-us__title">Что мы делаем</h2>
+      <p class="about-us__text">Наша команда занимается фронт-энд разработкой и версткой сайтов, используя только современные технологии. Уделяем особое внимание внутреннему качеству кода, тестируя проект по 60 критериям.</p>
+      <div class="about-us__link-box">
+        <a class="about-us__link" href="frontend.html">Вёрстка</a>
+        <a class="about-us__link" href="audit.html">Аудит</a>
+      </div>
+    </div>
+  </section>
+  <section class="estimate" id="estimate">
+    <div class="estimate__container">
+      <h2 class="estimate__title">Работать с нами</h2>
+      <h3 class="estimate__subtitle">Мы поможем не просто найти ошибки, но и устранить их. Оперативная работа над ошибками улучшает качество функционирования сайта и повышает коммерческую отдачу.</h3>
+      <form class="estimate__form">
+        <input class="estimate__form-input" name="name" type="text" placeholder="Имя">
+        <input class="estimate__form-input" name="phone" type="tel" placeholder="Телефон">
+        <input class="estimate__form-input" name="email" type="email" placeholder="E-mail">
+        <textarea class="estimate__form-comment" name="comment" cols="100" rows="4" placeholder="Опишите Вашу задачу"></textarea>
+        <div class="estimate__form-checkbox-box">
+          <input class="estimate__form-checkbox-pi" id="checkbox-pi" type="checkbox">
+          <label class="estimate__form-checkbox-pi-label" for="checkbox-pi"></label><span class="estimate__form-checkbox-pi-text">Я согласен(на) на обработку персональных данных в соответствии с <a class="estimate__form-checkbox-pi-text--link" href="#">политикой конфиденциальности</a></span></div>
+        <input class="estimate__form-submit" name="submit-form" type="submit" value="Оставить заявку">
+      </form>
     </div>
   </section>
   <script src="libs/libs.min.js"></script>
