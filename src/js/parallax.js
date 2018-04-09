@@ -6,10 +6,10 @@ $(window).on('scroll', function() {
 	});
 
 	$('.about-audit__planet2').css({
-		"transform" : `translate(0%, ${scrl / 3}%)`
+		"transform" : `translate(0%, ${scrl / 2.75}%)`
 	});
 
 	$('.about-audit__planet3').css({
-		"transform" : `translate(0%, ${scrl / 25}%)`
+		"transform" : `translate(0%, -${scrl / 20}%)`
 	});
 });

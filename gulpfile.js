@@ -86,6 +86,22 @@ gulp.task('pug', () => {
 		.pipe( gulp.dest( dirs.dist ) );
 });
 
+// Сборка JS библиотек
+gulp.task('libs-js', function() {
+	return gulp.src('./src/libs/*.js')
+		.pipe(concat('libs.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./dist/libs'))
+});
+
+// Сборка CSS библиотек
+gulp.task('libs-css', () => {
+	return gulp.src('./src/libs/*.css')
+		.pipe(concat('libs.min.css'))
+		.pipe( cleanCSS() ) 
+		.pipe(gulp.dest('./dist/libs'))
+});
+
 // Копирование шрифтов
 gulp.task( 'fonts', () => {
 	return gulp.src( `${dirs.source}/fonts/*.{ttf,woff,woff2,eot,svg}` )
@@ -112,9 +128,12 @@ gulp.task( 'clean', () => {
 // Минификация изображений
 gulp.task( 'img', ( callback ) => {
 	return gulp.src( `${dirs.source}/img/**/*.{jpg,jpeg,gif,png,svg}` )
-		.pipe( imagemin({
+		.pipe(imagemin({
 			progressive: true,
-			svgoPlugins: [ { removeViewBox: false } ],
+			svgoPlugins: [
+				{removeViewBox: false},
+				{cleanupIDs: false}
+			],
 			use: [ pngquant() ]
 		}))
 		.pipe( gulp.dest( `${dirs.dist}/img` ) );
@@ -126,6 +145,7 @@ gulp.task( 'build', ( callback ) => {
 	gulpSequence(
 		'clean',
 		'img',
+		[ 'libs-css', 'libs-js' ],
 		[ 'style', 'fonts', 'js' ],
 		'pug',
 		callback

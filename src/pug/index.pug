@@ -8,7 +8,45 @@ block menu
 	+menu(selected)
 
 block page-content
-	section.content
-		div.content__container
-			img(src="img/page-placeholders/index.jpg", alt="placeholder")
+
+	//- Block Promo
+	section.promo
+		div.promo__container
+			h2.promo__title Пожалуй, лучший аутсорс в рунете 
+			h3.promo__subtitle Фронт-энд разработка и поддержка сайтов 
+
+	//- Block Clients
+	section.clients
+		div.clients__container
+			h2.clients__title С нами работают
+			div.clients__logos-grid
+				div.clients__logo-box
+					img(src="img/index/clients/client1.png", alt="client1")
+				div.clients__logo-box
+					img(src="img/index/clients/client2.png", alt="client2")
+				div.clients__logo-box
+					img(src="img/index/clients/client3.png", alt="client3")
+				div.clients__logo-box
+					img(src="img/index/clients/client4.png", alt="client4")
+				div.clients__logo-box
+					img(src="img/index/clients/client5.png", alt="client5")
+				div.clients__logo-box
+					img(src="img/index/clients/client6.png", alt="client6")
+				div.clients__logo-box
+					img(src="img/index/clients/client7.png", alt="client7")
+				div.clients__logo-box
+					img(src="img/index/clients/client8.png", alt="client8")
+				div.clients__logo-box
+					img(src="img/index/clients/client9.png", alt="client9")
+				div.clients__logo-box
+					img(src="img/index/clients/client10.png", alt="client10")
+	
+	//- Block Reviews
+	section.reviews
+		div.reviews__container
+			h2.reviews__title Отзывы
+	
+
+	block libsJs
+		script(src="libs/libs.min.js")
 

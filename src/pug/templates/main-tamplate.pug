@@ -4,7 +4,8 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width" initial-scale="1.0")
 		block title
-		link(rel="stylesheet", href="css/style.min.css")
+		link(rel="stylesheet", href="libs/libs.min.css")
+		link(rel="stylesheet", href="css/style.css")
 	body
 		
 		//- Block Header
@@ -18,9 +19,9 @@ html(lang="ru")
 				div.header__burger
 					input.burger-checkbox(type='checkbox')
 					span
-		
-		//- Icon Scroll Up
-		a(href="#header").icon-scroll-up
+				
+				div.scroll-up
+					a(href="#header").scroll-up__icon
 
 		//- Block Page-Content
 		block page-content
@@ -31,17 +32,16 @@ html(lang="ru")
 				div.footer__top
 					a(href="index.html").footer__logo ракета
 					div.footer__contacts
-						div.footer__number 555-55-55-55
-						div.footer__email raketa@email.com
+						a(href="tel:+79119475986").footer__number +7 911 947 59 86
+						a(href="mailto:irina@htmlacademy.ru	").footer__email irina@htmlacademy.ru	
 				div.footer__bottom
 					div.footer__pp
-						| © Ракета
-						br
-						| Политика конфиденциальности
+						| ООО «Ракета»
 					div.footer__menu.menu
 						block menu
 					a(href="#estimate").footer__order оставить заявку
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="libs/libs.min.js")
 		script(src="js/script.min.js")
 					

@@ -1,9 +1,58 @@
-.content {
+// Block Promo
+.promo {
+	padding: 100px 0;
 
 	&__container {
+		@include container320();
+	}
+
+	&__title {
+		@include title320();
+	}
+
+	&__subtitle {
+		@include subtitle320();
+		margin-top: 70px;
+	}
+}
+
+// Block Clients 
+.clients {
+	padding: 100px 0 40px;
+
+	&__container {
+		@include container320();
+	}
+
+	&__title {
+		@include title320();
+	}
+
+	&__logos-grid {
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo-box {
 
 		& img {
-			width: 100%;
+			width: 90px;
 		}
+	}
+}
+
+// Block Reviews
+.reviews {
+	padding: 40px 0 80px;
+
+	&__container {
+		@include container320();
+	}
+	
+	&__title {
+		@include title320();
 	}
 }

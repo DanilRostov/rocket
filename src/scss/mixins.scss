@@ -1,24 +1,53 @@
-@mixin container() {
+// Mixins for 320 and more
+@mixin container320() {
 	padding: 0 15px;
 }
 
-@mixin container1170() {
-	width: 1170px;
+@mixin title320() {
+	font-size: 3.6em;
+	color: $color-blue;
+	text-transform: uppercase;
+}
+
+@mixin subtitle320() {
+	margin-top: 50px;
+	font-size: 2.2em;
+	color: $color-blue;
+}
+
+@mixin paragraph320() {
+	font-size: 1.8em;
+}
+
+// Mixins for 640 and more
+@mixin container640() {
+	padding: 0 40px;
+}
+
+// Mixins for 1024 and more
+@mixin container1024() {
+	width: 100%;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 @mixin title() {
-	font-size: 40px;
-	font-family: $ff-msc;
-	font-weight: normal;
+	font-size: 4em;
 	color: $color-blue;
 	text-transform: uppercase;
 }
 
 @mixin subtitle() {
 	margin-top: 55px;
-	font-size: 33px;
+	font-size: 3.3em;
 	color: $color-blue;
-	font-family: $ff-msc;
-	font-weight: normal;
+}
+
+@mixin paragraph() {
+	font-size: 2.5em;
+}
+
+// Mixins for 1250 and more
+@mixin container1250() {
+	width: 1170px;
 }

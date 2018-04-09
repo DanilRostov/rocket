@@ -1,5 +1,10 @@
 // Сброс основных стилей
-body {	margin: 0; width: 100%;}
+body {	
+	margin: 0; 
+	width: 100%;
+	font-size: 10px;
+	font-family: $ff-main;
+}
 * {	box-sizing: border-box; }
 img { vertical-align: top; }
 h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
@@ -13,7 +18,6 @@ h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
 a, a:hover, a:active, a:visited, a:focus,
 button, button:hover, button:active, button:visited, button:focus {
 	text-decoration: none;
-	outline: 0;
 }
 
 // Цвет placeholder в input
@@ -44,38 +48,5 @@ textarea:-webkit-autofill:focus {
 
 // Убрать resize в textarea
 textarea {
-    resize:none;
-}
-
-// Кастомный скролл
-::-webkit-scrollbar-button {
-	background-image: url('');
-	background-repeat: no-repeat;
-	width: 10px;
-	height: 0px
-}
-
-::-webkit-scrollbar-track {
-	background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-	background-color: $color-blue;
-}
-
-::-webkit-scrollbar-thumb:hover{
-	opacity: $color-grey;
-}
-
-::-webkit-resizer{
-	background-image: url('');
-	background-repeat: no-repeat;
-	width: 10px;
-	height: 0px;
-}
-
-::-webkit-scrollbar{
-	width: 7px;
+    resize: none;
 }

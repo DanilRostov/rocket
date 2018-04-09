@@ -1,13 +1,28 @@
-$(window).on('scroll', function() {
-	if( $(window).scrollTop() > 300 ) {
-		$('.icon-scroll-up').css({
-			'opacity' : '1',
-			'z-index' : '9999'
-		});
+const hideScrollUpIcon = () => {
+	const icon = $('.scroll-up__icon');
+	icon.removeClass('scroll-up__icon--active');
+}
+
+const showScrollUpIcon = () => {
+	const icon = $('.scroll-up__icon');
+	icon.addClass('scroll-up__icon--active');
+}
+
+const isIconShows = () => {
+	const bodyHeight = $('body').height();
+	const currentScroll = $( window ).scrollTop();
+	const windowHeight = $( window ).height();
+	const footerHeight = $('.footer').height();
+
+	if( currentScroll > 300 ) {
+		showScrollUpIcon();
 	} else {
-		$('.icon-scroll-up').css({
-			'opacity' : '0',
-			'z-index' : '-9999'
-		});
+		hideScrollUpIcon();
 	}
-});
+
+	if( ( bodyHeight - (currentScroll + windowHeight) ) < footerHeight ) {
+		hideScrollUpIcon();
+	}
+}
+
+$(window).on('scroll', isIconShows);
