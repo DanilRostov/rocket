@@ -22,8 +22,23 @@
 	}
 
 	@media screen and(min-width: 1024px) {
+		& {
+			padding: 180px 0 160px;
+		}
+
 		&__container {
 			@include container1024();
+		}
+
+		&__title {
+			@include title();
+		}
+
+		&__subtitle {
+			@include subtitle();
+			margin-top: 10px;
+			font-size: 4em;
+			font-weight: normal;
 		}
 	}
 
@@ -74,12 +89,28 @@
 	}
 
 	@media screen and(min-width: 1024px) {
+		& {
+			padding: 160px 0 90px;
+		}
+
 		&__container {
 			@include container1024();
 		}
 
+		&__title {
+			@include title();
+		}
+
+		&__logos-grid {
+			margin-top: 70px;
+		}
+
 		&__logo-box {
 			width: 20%;
+
+			& img {
+				width: 150px;
+			}
 		}
 	}
 
@@ -151,12 +182,43 @@
 	}
 	
 	@media screen and(min-width: 1024px) {
+		& {
+			padding: 90px 55px;
+		}
+
 		&__container {
 			@include container1024();
 		}
 
+		&__title {
+			@include title();
+		}
+
+		&__slider {
+			margin-top: 100px;
+		}
+
+		&__slide {
+			padding: 60px 50px;
+		}
+
+		&__slide-text {
+			font-size: 3.7em;
+		}
+
+		&__slide-author {
+			margin-top: 40px;
+			font-size: 2em;
+		}
+
 		&__slide-company {
+			margin-top: 20px;
 			height: 45px;
+			font-size: 2em;
+		}
+
+		&__slider-pagination {
+			margin-top: 80px;
 		}
 	}
 
@@ -169,18 +231,31 @@
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
 	margin: 0 20px;
+
+	@media screen and(min-width: 1024px) {
+		& {
+			margin: 0 40px;
+		}
+	}
 }
 
 .swiper-pagination-bullet {
 	
 	width: 15px;
 	height: 15px;
-	background: #467CF6;
+	background: #8D35F0;
 	opacity: 0.5;
 	transition: all 250ms ease;
 
 	&-active {
 		opacity: 1;
+	}
+
+	@media screen and(min-width: 1024px) {
+		& {
+			width: 25px;
+			height: 25px;
+		}
 	}
 }
 
@@ -210,13 +285,15 @@
 		margin-top: 50px;
 		text-align: center;
 		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		font-size: 3em;
 		color: #fff;
 		background: $bg-gradient;
 		text-transform: uppercase;
 		font-weight: bold;
 		border: 4px solid #fff;
-		transition: all 250ms ease;
 
 		&:hover {
 			color: $color-blue;
@@ -241,14 +318,56 @@
 	}
 
 	@media screen and(min-width: 1024px) {
+		& {
+			padding: 55px 70px;
+		}
+
 		&__container {
 			@include container1024();
+		}
+
+		&__title {
+			@include title();
+		}
+
+		&__text {
+			@include paragraph();
+			margin-top: 80px;
+			padding: 0 100px;
+		}
+
+		&__link-box {
+			margin-top: 70px;
+			padding: 0 100px;
+		}
+
+		&__link {
+			padding: 35px;
+			font-size: 3.3em;
 		}
 	}
 
 	@media screen and(min-width: 1250px) {
 		&__container {
 			@include container1250();
+		}
+	}
+}
+
+// Block Estimate--index
+.estimate--index {
+
+	@media screen and(min-width: 1024px) {
+		& {
+			padding: 70px 0 110px;
+		}
+
+		&__subtitle {
+			padding: 0 100px;
+		}
+
+		&__form {
+			margin: 90px 100px 0;
 		}
 	}
 }

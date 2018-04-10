@@ -8,6 +8,74 @@ block menu
 	+menu(selected)
 
 block page-content
-	section.content
-		div.content__container
-			img(src="img/page-placeholders/frontend.jpg", alt="placeholder")
+	
+	//- Block Frontend-promo
+	section.frontend-promo
+		div.frontend-promo__container
+			h2.frontend-promo__title Вёрстка
+			p.frontend-promo__text Собираем из готового дизайна надёжные HTML-сайты, используя современные технологии разработки. Обеспечиваем качественный код, полную поддержку всех браузеров и гарантируем соблюдение сроков.
+			a(href="#").frontend-promo__academy
+				img(src="img/htmlacademy.svg", alt="htmlacademy")
+			a(href="#estimate").frontend-promo__order работать с нами
+			
+	//- Block Criteria
+	section.criteria
+		div.criteria__container
+			div.criteria__items-box
+				div.criteria__item Оцениваем проект в течение 24 часов
+				div.criteria__item Интегрируемся на сторону клиента
+				div.criteria__item Имеем свой штат тестировщиков
+				div.criteria__item Оцениваем проект любой сложности в течении 24 часов
+				div.criteria__item Подстраиваемся под ваши методологи
+				div.criteria__item Тестируем проект по 60 критериям качества
+
+	//- Block Steck
+	section.steck
+		div.steck__container
+			h2.steck__title Стек технологий
+			div.steck__grid
+				div.steck__items-box
+					span.steck__item HTML 
+					span.steck__item CSS
+					span.steck__item JavaScript
+					span.steck__item Less/SCSS/PostCss
+					span.steck__item Gulp
+				div.steck__items-box
+					span.steck__item Pug/Jade 
+					span.steck__item Stylus
+					span.steck__item jQuery
+					span.steck__item Grunt
+					span.steck__item React (JSX + CSS.Modules)
+
+	//- Block Price
+	section.price
+		div.price__container
+			h2.price__title Стоимость
+			h3.price__subtitle Все просто. Никаких лишних цифр
+			div.price__cost-box
+				span.price__cost-text.price__cost-text--big 650₽
+				span.price__cost-text.price__cost-text--small в час
+			p.price__text.price__text--first Работаем на условиях 50% предоплаты. Постоплата в проекте менее 50 часов.
+			p.price__text Предоставляем 14 дней гарантии на внесение бесплатных исправлений после сдачи проекта.
+			p.price__text Рассматриваем разные варианты сотрудничества, с почасовой, еженедельной или ежемесячной оплатой.
+
+	//- Block Estimate
+	section#estimate.estimate
+		div.estimate__container
+			h2.estimate__title Работать с нами
+			h3.estimate__subtitle Мы поможем не просто найти ошибки, но и устранить их. Оперативная работа над ошибками улучшает качество функционирования сайта и повышает коммерческую отдачу.
+			form.estimate__form
+				input(name="name", type="text", placeholder="Имя").estimate__form-input
+				input(name="phone", type="tel", placeholder="Телефон").estimate__form-input
+				input(name="email", type="email", placeholder="E-mail").estimate__form-input
+				textarea(name="comment", cols="100", rows="4", placeholder="Опишите Вашу задачу").estimate__form-comment
+				div.estimate__form-checkbox-box
+					input#checkbox-pi(type="checkbox").estimate__form-checkbox-pi
+					label.estimate__form-checkbox-pi-label(for="checkbox-pi")
+					span.estimate__form-checkbox-pi-text Я согласен(на) на обработку персональных данных в соответствии с 
+						a(href="#").estimate__form-checkbox-pi-text--link политикой конфиденциальности
+				input(name="submit-form", type="submit", value="Оставить заявку").estimate__form-submit
+
+
+ 
+	

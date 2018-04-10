@@ -20,7 +20,13 @@
 		font-size: 2.9em;
 		color: #fff;
 		background: $bg-gradient;
-		border: 4px solid $color-blue;
+
+		&:hover {
+			color: $color-blue;
+			border: 3px solid $color-blue;
+			background: #fff;
+			padding: 0 32px 0;
+		}
 	}
 
 	&__menu {
@@ -44,11 +50,12 @@
 		font-weight: 900;
 		color: $color-blue;
 		border: 4px solid $color-blue;
-		transition: all 200ms ease;
 
 		&:hover {
+			padding: 4px 39px;
 			color: #fff;
 			background: $bg-gradient;
+			border: none;
 		}
 	}
 
@@ -280,12 +287,11 @@
 		font-size: 2.9em;
 		color: #fff;
 		border: 3px solid #fff;
-		transition: all 200ms ease;
 
 		&:hover {
-			border: 3px solid $color-blue;
-			background: #fff;
-			color: $color-blue;
+			background: $bg-gradient;
+			border: none;
+			padding: 8px 33px;
 		}
 	}
 
@@ -347,12 +353,12 @@
 		font-weight: 900;
 		color: #fff;
 		border: 3px solid #fff;
-		transition: all 200ms ease;
 
 		&:hover {
-			background: #fff;
-			color: $color-blue;
-			border: 3px solid $color-blue;
+			padding: 23px 38px;
+			color: #fff;
+			background: $bg-gradient;
+			border: none;
 		}
 	}
 

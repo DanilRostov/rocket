@@ -27,9 +27,61 @@
       </div>
     </div>
   </header>
-  <section class="content">
-    <div class="content__container">
-      <img src="img/page-placeholders/frontend.jpg" alt="placeholder">
+  <section class="frontend-promo">
+    <div class="frontend-promo__container">
+      <h2 class="frontend-promo__title">Вёрстка</h2>
+      <p class="frontend-promo__text">Собираем из готового дизайна надёжные HTML-сайты, используя современные технологии разработки. Обеспечиваем качественный код, полную поддержку всех браузеров и гарантируем соблюдение сроков.</p>
+      <a class="frontend-promo__academy" href="#">
+        <img src="img/htmlacademy.svg" alt="htmlacademy">
+      </a>
+      <a class="frontend-promo__order" href="#estimate">работать с нами</a>
+    </div>
+  </section>
+  <section class="criteria">
+    <div class="criteria__container">
+      <div class="criteria__items-box">
+        <div class="criteria__item">Оцениваем проект в течение 24 часов</div>
+        <div class="criteria__item">Интегрируемся на сторону клиента</div>
+        <div class="criteria__item">Имеем свой штат тестировщиков</div>
+        <div class="criteria__item">Оцениваем проект любой сложности в течении 24 часов</div>
+        <div class="criteria__item">Подстраиваемся под ваши методологи</div>
+        <div class="criteria__item">Тестируем проект по 60 критериям качества</div>
+      </div>
+    </div>
+  </section>
+  <section class="steck">
+    <div class="steck__container">
+      <h2 class="steck__title">Стек технологий</h2>
+      <div class="steck__grid">
+        <div class="steck__items-box"><span class="steck__item">HTML </span><span class="steck__item">CSS</span><span class="steck__item">JavaScript</span><span class="steck__item">Less/SCSS/PostCss</span><span class="steck__item">Gulp</span></div>
+        <div class="steck__items-box"><span class="steck__item">Pug/Jade </span><span class="steck__item">Stylus</span><span class="steck__item">jQuery</span><span class="steck__item">Grunt</span><span class="steck__item">React (JSX + CSS.Modules)</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="price">
+    <div class="price__container">
+      <h2 class="price__title">Стоимость</h2>
+      <h3 class="price__subtitle">Все просто. Никаких лишних цифр</h3>
+      <div class="price__cost-box"><span class="price__cost-text price__cost-text--big">650₽</span><span class="price__cost-text price__cost-text--small">в час</span></div>
+      <p class="price__text price__text--first">Работаем на условиях 50% предоплаты. Постоплата в проекте менее 50 часов.</p>
+      <p class="price__text">Предоставляем 14 дней гарантии на внесение бесплатных исправлений после сдачи проекта.</p>
+      <p class="price__text">Рассматриваем разные варианты сотрудничества, с почасовой, еженедельной или ежемесячной оплатой.</p>
+    </div>
+  </section>
+  <section class="estimate" id="estimate">
+    <div class="estimate__container">
+      <h2 class="estimate__title">Работать с нами</h2>
+      <h3 class="estimate__subtitle">Мы поможем не просто найти ошибки, но и устранить их. Оперативная работа над ошибками улучшает качество функционирования сайта и повышает коммерческую отдачу.</h3>
+      <form class="estimate__form">
+        <input class="estimate__form-input" name="name" type="text" placeholder="Имя">
+        <input class="estimate__form-input" name="phone" type="tel" placeholder="Телефон">
+        <input class="estimate__form-input" name="email" type="email" placeholder="E-mail">
+        <textarea class="estimate__form-comment" name="comment" cols="100" rows="4" placeholder="Опишите Вашу задачу"></textarea>
+        <div class="estimate__form-checkbox-box">
+          <input class="estimate__form-checkbox-pi" id="checkbox-pi" type="checkbox">
+          <label class="estimate__form-checkbox-pi-label" for="checkbox-pi"></label><span class="estimate__form-checkbox-pi-text">Я согласен(на) на обработку персональных данных в соответствии с <a class="estimate__form-checkbox-pi-text--link" href="#">политикой конфиденциальности</a></span></div>
+        <input class="estimate__form-submit" name="submit-form" type="submit" value="Оставить заявку">
+      </form>
     </div>
   </section>
   <footer class="footer">
