@@ -732,6 +732,12 @@ textarea {
     left: -407px;
     top: 40px;
     z-index: -1; }
+  .promo__space {
+    position: absolute;
+    width: 1480px;
+    right: -511px;
+    top: -599px;
+    z-index: -2; }
 
 .clients {
   padding: 80px 0 40px; }
