@@ -1,0 +1,68 @@
+// Block Promo-blog
+.promo-blog {
+	padding: 50px 0;
+
+	&__container {
+		@include container320();
+	}
+
+	&__title {
+		@include title320();
+	}
+
+	&__subtitle {
+		@include subtitle320();
+	}
+
+	&__academy {
+		margin-top: 50px;
+		display: block;
+		text-align: right;
+
+		& img {
+			width: 170px;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
+		& {
+			padding: 70px 0;
+		}
+
+		&__container {
+			@include container640();
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		& {
+			padding: 100px 0;
+		}
+
+		&__container {
+			@include container1024();
+		}
+
+		&__title {
+			@include title();
+		}
+
+		&__subtitle {
+			@include subtitle();
+		}
+
+		&__academy {
+			margin-top: 120px;
+
+			& img {
+				width: 220px;
+			}
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}

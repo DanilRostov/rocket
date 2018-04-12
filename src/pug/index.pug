@@ -14,6 +14,8 @@ block page-content
 		div.promo__container
 			h2.promo__title Пожалуй, лучший аутсорс в рунете 
 			h3.promo__subtitle Фронт-энд разработка и поддержка сайтов 
+			a(href="#").promo__academy
+				img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
 
 	//- Block Clients
 	section.clients
@@ -21,25 +23,26 @@ block page-content
 			h2.clients__title С нами работают
 			div.clients__logos-grid
 				div.clients__logo-box
-					img(src="img/index/clients/client1.png", alt="client1")
+					img(src="img/logos/agima.svg", alt="agima")
 				div.clients__logo-box
-					img(src="img/index/clients/client2.png", alt="client2")
+					span.clients__logo-box--done Done.
+					div(style="width: 100%; height: 50%; background-color: rgb(243, 255, 15); position: absolute; z-index: -1; transform: rotate(-3deg);")
 				div.clients__logo-box
-					img(src="img/index/clients/client3.png", alt="client3")
+					img(src="img/logos/pitercssconf.svg", alt="pitercssconf")
 				div.clients__logo-box
-					img(src="img/index/clients/client4.png", alt="client4")
+					img(src="img/logos/molinos.svg", alt="molinos")
 				div.clients__logo-box
-					img(src="img/index/clients/client5.png", alt="client5")
+					img(src="img/logos/shishki.svg", alt="shishki")
 				div.clients__logo-box
-					img(src="img/index/clients/client6.png", alt="client6")
+					img(src="img/logos/itmo.svg", alt="itmo")
 				div.clients__logo-box
-					img(src="img/index/clients/client7.png", alt="client7")
+					img(src="img/logos/setka.svg", alt="setka")
 				div.clients__logo-box
-					img(src="img/index/clients/client8.png", alt="client8")
+					img(src="img/logos/cubeline.svg", alt="cubeline")
 				div.clients__logo-box
-					img(src="img/index/clients/client9.png", alt="client9")
+					img(src="img/logos/itsagency.png", alt="itsagency")
 				div.clients__logo-box
-					img(src="img/index/clients/client10.png", alt="client10")
+					img(src="img/logos/adindex.png", alt="adindex")
 	
 	//- Block Reviews
 	section.reviews
@@ -71,11 +74,11 @@ block page-content
 				a.about-us__link(href="audit.html") Аудит
 
 	//- Block Estimate
-	section#estimate.estimate.estimate--index
+	section#estimate.estimate
 		div.estimate__container
 			h2.estimate__title Работать с нами
 			h3.estimate__subtitle.estimate--index__subtitle Мы поможем не просто найти ошибки, но и устранить их. Оперативная работа над ошибками улучшает качество функционирования сайта и повышает коммерческую отдачу.
-			form.estimate__form.estimate--index__form
+			form.estimate__form
 				input(name="name", type="text", placeholder="Имя").estimate__form-input
 				input(name="phone", type="tel", placeholder="Телефон").estimate__form-input
 				input(name="email", type="email", placeholder="E-mail").estimate__form-input

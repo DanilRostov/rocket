@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Done';
+  src: local("done"), url("../fonts/done.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
 body {
   margin: 0;
   width: 100%;
@@ -206,19 +212,20 @@ textarea {
 .scroll-up {
   position: absolute;
   top: 0;
-  right: 15px;
-  width: 75px;
-  height: 75px; }
+  right: 13px;
+  width: 55px;
+  height: 55px; }
   .scroll-up__icon {
     position: fixed;
     display: inline-block;
     opacity: 0;
-    background: url("../img/icon-scroll-up.png");
+    background: url("../img/icon-scroll-up.svg");
     background-repeat: no-repeat;
-    background-size: 75px;
-    width: 75px;
-    height: 75px;
-    bottom: 5%;
+    background-position: center;
+    background-size: 100px;
+    width: 55px;
+    height: 55px;
+    bottom: 10px;
     z-index: -999;
     cursor: pointer;
     -webkit-transition: all 250ms ease;
@@ -324,23 +331,23 @@ textarea {
       background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
       border: none; }
 
-.about-audit {
-  padding: 45px 0;
-  overflow: hidden; }
-  .about-audit__container {
-    position: relative;
-    padding: 0 15px; }
-  .about-audit__title {
+.audit-promo {
+  padding: 50px 0; }
+  .audit-promo__container {
+    padding: 0 15px;
+    position: relative; }
+  .audit-promo__title {
     font-size: 3.6em;
     color: #3989F5;
     text-transform: uppercase; }
-  .about-audit__text {
+  .audit-promo__text {
+    font-size: 1.8em;
     margin-top: 50px;
-    font-size: 1.8em; }
-  .about-audit__order {
+    max-width: 90%; }
+  .audit-promo__order {
     width: 100%;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 130px;
     display: inline-block;
     padding: 20px 30px;
     text-transform: uppercase;
@@ -348,11 +355,22 @@ textarea {
     font-weight: 900;
     color: #3989F5;
     border: 3px solid #3989F5; }
-    .about-audit__order:hover {
+    .audit-promo__order:hover {
       padding: 23px 33px;
       color: #fff;
       background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
       border: none; }
+  .audit-promo__academy {
+    position: absolute;
+    right: 15px;
+    bottom: 105px;
+    margin-top: 25px;
+    display: block;
+    text-align: right; }
+    .audit-promo__academy img {
+      width: 170px; }
+  .audit-promo__academy-link {
+    display: inline-block; }
 
 .tech-audit {
   padding: 45px 0; }
@@ -363,10 +381,24 @@ textarea {
     color: #3989F5;
     text-transform: uppercase; }
   .tech-audit__text {
-    margin-top: 10px;
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: #3989F5; }
     .tech-audit__text--first {
       margin-top: 50px; }
+    .tech-audit__text:before {
+      display: block;
+      position: absolute;
+      content: "";
+      background-image: url("../img/planet.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 35px;
+      height: 35px;
+      left: -55px;
+      top: 2px; }
 
 .metriks {
   padding: 45px 0; }
@@ -486,6 +518,7 @@ textarea {
     font-size: 2.2em;
     color: #3989F5; }
   .estimate__form {
+    position: relative;
     margin-top: 50px;
     position: relative;
     padding: 0 25px 80px;
@@ -497,6 +530,17 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column;
     background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5); }
+    .estimate__form:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 150px;
+      left: -150px;
+      top: -90px;
+      background-image: url(../img/planet.svg);
+      background-repeat: no-repeat;
+      background-size: contain; }
   .estimate__form-planet {
     position: absolute;
     top: -85px;
@@ -510,7 +554,7 @@ textarea {
     border: none;
     border-bottom: 2px solid #fff;
     text-indent: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     border-radius: 0; }
   .estimate__form-comment {
     margin-top: 65px;
@@ -537,7 +581,7 @@ textarea {
       .estimate__form-checkbox-pi + label:before {
         content: '';
         position: absolute;
-        top: -4px;
+        top: -6px;
         left: 0;
         width: 18px;
         height: 18px;
@@ -548,7 +592,7 @@ textarea {
       .estimate__form-checkbox-pi + label:after {
         content: '';
         position: absolute;
-        top: 0;
+        top: -2px;
         left: 4px;
         width: 12px;
         height: 12px;
@@ -583,21 +627,30 @@ textarea {
       border: none; }
 
 .promo {
-  padding: 100px 0; }
+  padding: 60px 0 0; }
   .promo__container {
-    padding: 0 15px; }
+    padding: 0 15px;
+    position: relative; }
   .promo__title {
     font-size: 3.6em;
     color: #3989F5;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    max-width: 300px; }
   .promo__subtitle {
     margin-top: 50px;
     font-size: 2.2em;
     color: #3989F5;
-    margin-top: 70px; }
+    margin-top: 70px;
+    max-width: 400px; }
+  .promo__academy {
+    margin-top: 50px;
+    display: block;
+    text-align: right; }
+    .promo__academy img {
+      width: 170px; }
 
 .clients {
-  padding: 100px 0 40px; }
+  padding: 80px 0 40px; }
   .clients__container {
     padding: 0 15px; }
   .clients__title {
@@ -618,10 +671,25 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .clients__logo-box {
+    position: relative;
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     width: 33.33%; }
     .clients__logo-box img {
-      width: 90px; }
+      width: 70px; }
+    .clients__logo-box--done {
+      font-family: 'done';
+      font-style: normal;
+      font-size: 35px; }
 
 .reviews {
   padding: 40px 0 40px; }
@@ -707,28 +775,30 @@ textarea {
     color: #fff;
     background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
     text-transform: uppercase;
-    font-weight: bold;
-    border: 4px solid #fff; }
+    font-weight: bold; }
     .about-us__link:hover {
       color: #3989F5;
       background: #fff;
-      border: 4px solid #3989F5; }
+      border: 4px solid #3989F5;
+      padding: 16px 20px; }
 
 .frontend-promo {
   padding: 50px 0 35px; }
   .frontend-promo__container {
-    padding: 0 15px; }
+    padding: 0 15px;
+    position: relative; }
   .frontend-promo__title {
     font-size: 3.6em;
     color: #3989F5;
     text-transform: uppercase; }
   .frontend-promo__text {
+    font-size: 1.8em;
     margin-top: 50px;
-    font-size: 1.8em; }
+    max-width: 90%; }
   .frontend-promo__order {
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 130px;
     display: inline-block;
     padding: 20px 30px;
     text-transform: uppercase;
@@ -742,9 +812,16 @@ textarea {
       background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
       border: none; }
   .frontend-promo__academy {
-    margin-top: 50px;
+    position: absolute;
+    right: 15px;
+    bottom: 105px;
+    margin-top: 25px;
     display: block;
     text-align: right; }
+    .frontend-promo__academy img {
+      width: 170px; }
+  .frontend-promo__academy-link {
+    display: inline-block; }
 
 .criteria {
   padding: 15px 0 40px; }
@@ -779,7 +856,7 @@ textarea {
     font-weight: bold; }
 
 .steck {
-  padding: 40px 0 110px; }
+  padding: 40px 0 60px; }
   .steck__container {
     padding: 0 15px; }
   .steck__title {
@@ -787,14 +864,19 @@ textarea {
     color: #3989F5;
     text-transform: uppercase; }
   .steck__grid {
+    position: relative;
     margin-top: 50px;
-    padding-bottom: 60px;
+    padding: 0 0 70px 10%; }
+  .steck__img {
+    position: absolute;
+    width: 100px;
+    height: 510px;
     background-image: url("../img/steck--mobile.svg");
     background-repeat: no-repeat;
     background-size: 86px;
-    background-position: 10% 5px; }
+    background-position: 0 5px; }
   .steck__items-box {
-    margin-left: 35%; }
+    margin-left: 100px; }
   .steck__item {
     margin-top: 25px;
     display: block;
@@ -802,7 +884,7 @@ textarea {
     font-size: 1.6em; }
 
 .price {
-  padding: 110px 0 45px; }
+  padding: 60px 0 45px; }
   .price__container {
     padding: 0 15px; }
   .price__title {
@@ -815,7 +897,7 @@ textarea {
     color: #3989F5;
     margin-top: 35px; }
   .price__cost-box {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 20px;
     background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
     text-align: center; }
@@ -831,11 +913,45 @@ textarea {
       font-size: 3em; }
   .price__text {
     font-size: 1.8em;
+    position: relative;
     margin-top: 30px;
     margin-left: 50px;
     color: #3989F5; }
     .price__text--first {
       margin-top: 50px; }
+    .price__text:before {
+      display: block;
+      position: absolute;
+      content: "";
+      background-image: url("../img/planet.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 35px;
+      height: 35px;
+      left: -45px;
+      top: 5px; }
+
+.promo-blog {
+  padding: 50px 0; }
+  .promo-blog__container {
+    padding: 0 15px; }
+  .promo-blog__title {
+    font-size: 3.6em;
+    color: #3989F5;
+    text-transform: uppercase; }
+  .promo-blog__subtitle {
+    margin-top: 50px;
+    font-size: 2.2em;
+    color: #3989F5; }
+  .promo-blog__academy {
+    margin-top: 50px;
+    display: block;
+    text-align: right; }
+    .promo-blog__academy img {
+      width: 170px; }
+    @media screen and (min-width: 420px) {
+    .steck__grid {
+      padding: 0 0 70px 20%; } }
     @media screen and (min-width: 640px) {
     .header {
       padding: 30px 0; }
@@ -847,8 +963,15 @@ textarea {
       right: 40px; }
     .footer__container {
       padding: 0 40px; }
-    .about-audit__container {
+    .audit-promo__container {
       padding: 0 40px; }
+    .audit-promo__order {
+      margin-top: 40px;
+      width: auto; }
+    .audit-promo__academy {
+      position: static; }
+    .audit-promo__text {
+      width: 80%; }
     .tech-audit__container {
       padding: 0 40px; }
     .metriks__container {
@@ -873,6 +996,11 @@ textarea {
       padding: 0 40px; }
     .estimate__form {
       padding: 0 60px 80px; }
+      .estimate__form:before {
+        width: 200px;
+        height: 200px;
+        left: -100px;
+        top: -60px; }
     .estimate__form-input {
       text-indent: 20px; }
     .estimate__form-comment {
@@ -883,6 +1011,10 @@ textarea {
       padding: 0 40px; }
     .clients__logo-box {
       width: 25%; }
+      .clients__logo-box img {
+        width: 90px; }
+      .clients__logo-box--done {
+        font-size: 42px; }
     .reviews__container {
       padding: 0 40px; }
     .reviews__slide-text {
@@ -902,7 +1034,10 @@ textarea {
     .frontend-promo__container {
       padding: 0 40px; }
     .frontend-promo__order {
+      margin-top: 40px;
       width: auto; }
+    .frontend-promo__academy {
+      position: static; }
     .frontend-promo__text {
       width: 80%; }
     .criteria__container {
@@ -912,7 +1047,25 @@ textarea {
       padding: 25px; }
     .steck__container {
       padding: 0 40px; }
+    .steck__grid {
+      padding: 0 0 70px 25%; }
+    .steck__img {
+      width: 115px;
+      height: 625px;
+      background-size: 106px; }
+    .steck__items-box {
+      margin-left: 125px; }
+    .steck__item {
+      font-size: 2.5em; }
     .price__container {
+      padding: 0 40px; }
+    .price__cost-box {
+      width: 300px;
+      margin: 40px auto;
+      padding: 30px; }
+    .promo-blog {
+      padding: 70px 0; }
+    .promo-blog__container {
       padding: 0 40px; } }
     @media screen and (min-width: 1024px) {
     .header__container {
@@ -933,14 +1086,14 @@ textarea {
   .menu__link {
     width: auto; }
     .scroll-up {
-      right: 20px;
-      width: 107px;
-      height: 107px; }
+      right: 15px;
+      width: 85px;
+      height: 85px; }
     .scroll-up__icon {
-      width: 107px;
-      height: 107px;
-      bottom: 12%;
-      background-size: 107px; }
+      width: 85px;
+      height: 85px;
+      bottom: 20px;
+      background-size: 150px; }
     .footer__container {
       width: 100%;
       margin: 0 auto;
@@ -963,14 +1116,25 @@ textarea {
       display: flex; }
     .footer__order {
       padding: 0 35px; }
-    .about-audit {
-      padding: 170px 0 75px; }
-    .about-audit__container {
+    .audit-promo {
+      padding: 100px 0 40px; }
+    .audit-promo__container {
       width: 100%;
       margin: 0 auto;
       padding: 0 20px; }
-    .about-audit__order {
-      width: auto; }
+    .audit-promo__title {
+      font-size: 4em;
+      color: #3989F5;
+      text-transform: uppercase; }
+    .audit-promo__text {
+      font-size: 2.5em; }
+    .audit-promo__academy {
+      margin-top: 20px; }
+      .audit-promo__academy img {
+        width: 220px; }
+    .audit-promo__order {
+      width: auto;
+      margin-top: 60px; }
     .tech-audit {
       padding: 100px 0 55px; }
     .tech-audit__container {
@@ -981,6 +1145,11 @@ textarea {
       font-size: 4em;
       color: #3989F5;
       text-transform: uppercase; }
+    .tech-audit__text:before {
+      width: 45px;
+      height: 45px;
+      top: -2px;
+      left: -60px; }
     .metriks {
       padding: 55px 0 90px; }
     .metriks__container {
@@ -1019,7 +1188,7 @@ textarea {
       text-transform: uppercase; }
     .tarifs__subtitle {
       margin-top: 55px;
-      font-size: 3.3em;
+      font-size: 3em;
       color: #3989F5; }
     .tarifs__item {
       padding: 45px 30px;
@@ -1043,11 +1212,16 @@ textarea {
       text-transform: uppercase; }
     .estimate__subtitle {
       margin-top: 55px;
-      font-size: 3.3em;
+      font-size: 3em;
       color: #3989F5; }
     .estimate__form {
       margin-top: 90px;
       padding: 0 20% 80px; }
+      .estimate__form:before {
+        width: 300px;
+        height: 300px;
+        left: -150px;
+        top: -90px; }
     .estimate__form-input {
       text-ident: 30px;
       font-size: 2em; }
@@ -1063,7 +1237,7 @@ textarea {
     .estimate__form-checkbox-pi-text {
       font-size: 2em; }
     .promo {
-      padding: 180px 0 160px; }
+      padding: 180px 0 0; }
     .promo__container {
       width: 100%;
       margin: 0 auto;
@@ -1071,16 +1245,22 @@ textarea {
     .promo__title {
       font-size: 4em;
       color: #3989F5;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      max-width: none; }
     .promo__subtitle {
       margin-top: 55px;
-      font-size: 3.3em;
+      font-size: 3em;
       color: #3989F5;
       margin-top: 10px;
       font-size: 4em;
-      font-weight: normal; }
+      font-weight: normal;
+      max-width: none; }
+    .promo__academy {
+      margin-top: 120px; }
+      .promo__academy img {
+        width: 220px; }
     .clients {
-      padding: 160px 0 90px; }
+      padding: 100px 0 90px; }
     .clients__container {
       width: 100%;
       margin: 0 auto;
@@ -1090,11 +1270,15 @@ textarea {
       color: #3989F5;
       text-transform: uppercase; }
     .clients__logos-grid {
-      margin-top: 70px; }
+      margin-top: 50px; }
     .clients__logo-box {
-      width: 20%; }
+      margin-top: 20px;
+      width: 20%;
+      height: 90px; }
       .clients__logo-box img {
         width: 150px; }
+      .clients__logo-box--done {
+        font-size: 50px; }
     .reviews {
       padding: 90px 55px; }
     .reviews__container {
@@ -1145,29 +1329,25 @@ textarea {
     .about-us__link {
       padding: 35px;
       font-size: 3.3em; }
-  .estimate--index {
-    padding: 70px 0 110px; }
-  .estimate--index__subtitle {
-    padding: 0 100px; }
-  .estimate--index__form {
-    margin: 90px 100px 0; }
     .frontend-promo {
-      padding: 150px 0 40px; }
+      padding: 100px 0 40px; }
     .frontend-promo__container {
       width: 100%;
       margin: 0 auto;
-      padding: 0 20px;
-      position: relative; }
+      padding: 0 20px; }
+    .frontend-promo__title {
+      font-size: 4em;
+      color: #3989F5;
+      text-transform: uppercase; }
+    .frontend-promo__text {
+      font-size: 2.5em; }
     .frontend-promo__academy {
-      position: absolute;
-      right: 20px;
-      bottom: 0; }
+      margin-top: 20px; }
       .frontend-promo__academy img {
         width: 220px; }
     .frontend-promo__order {
       width: auto;
-      margin-top: 70px;
-      margin-bottom: 100px; }
+      margin-top: 60px; }
     .criteria {
       padding: 0 0 90px; }
     .criteria__container {
@@ -1185,10 +1365,76 @@ textarea {
       width: 100%;
       margin: 0 auto;
       padding: 0 20px; }
+    .steck__title {
+      font-size: 4em;
+      color: #3989F5;
+      text-transform: uppercase; }
+    .steck__grid {
+      margin-top: 80px;
+      padding: 0;
+      text-align: center;
+      margin-right: 40px; }
+    .steck__img {
+      width: 100%;
+      height: 460px;
+      background-image: url("../img/steck--desktop.svg");
+      background-size: 533px;
+      background-position: center 28px; }
+    .steck__items-box {
+      display: inline-block;
+      margin-left: 70px;
+      vertical-align: top;
+      text-align: left; }
+      .steck__items-box--second {
+        margin-top: 28px;
+        margin-left: 400px;
+        width: 190px; }
+    .steck__item {
+      margin-top: 16px;
+      font-size: 3em; }
     .price__container {
       width: 100%;
       margin: 0 auto;
-      padding: 0 20px; } }
+      padding: 0 20px; }
+    .price__title {
+      font-size: 4em;
+      color: #3989F5;
+      text-transform: uppercase; }
+    .price__subtitle {
+      margin-top: 55px;
+      font-size: 3em;
+      color: #3989F5;
+      margin-top: 30px; }
+    .price__cost-box {
+      padding: 40px;
+      width: 450px; }
+    .price__cost-text--big {
+      font-size: 10em; }
+    .price__text {
+      font-size: 2.5em; }
+      .price__text:before {
+        width: 45px;
+        height: 45px;
+        top: 2px;
+        left: -60px; }
+    .promo-blog {
+      padding: 100px 0; }
+    .promo-blog__container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px; }
+    .promo-blog__title {
+      font-size: 4em;
+      color: #3989F5;
+      text-transform: uppercase; }
+    .promo-blog__subtitle {
+      margin-top: 55px;
+      font-size: 3em;
+      color: #3989F5; }
+    .promo-blog__academy {
+      margin-top: 120px; }
+      .promo-blog__academy img {
+        width: 220px; } }
     @media screen and (min-width: 1250px) {
     .header__container {
       width: 1170px; }
@@ -1196,7 +1442,7 @@ textarea {
     width: 1170px; }
     .footer__container {
       width: 1170px; }
-    .about-audit__container {
+    .audit-promo__container {
       width: 1170px; }
     .tech-audit__container {
       width: 1170px; }
@@ -1223,7 +1469,12 @@ textarea {
       width: 1170px; }
     .steck__container {
       width: 1170px; }
+    .steck__item {
+      margin-top: 10px;
+      font-size: 3.5em; }
     .price__container {
+      width: 1170px; }
+    .promo-blog__container {
       width: 1170px; } }
 
 /*# sourceMappingURL=style.css.map */
