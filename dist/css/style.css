@@ -45,14 +45,19 @@ input:-ms-input-placeholder {
   color: #fff;
   font-style: italic; }
 
+button, input, select, textarea {
+  font-family: inherit; }
+
 textarea::-webkit-input-placeholder {
   color: #707070; }
 
 textarea::-moz-placeholder {
-  color: #707070; }
+  color: #707070;
+  font-family: 'Open Sans', sans-serif; }
 
 textarea:-moz-placeholder {
-  color: #707070; }
+  color: #707070;
+  font-family: 'Open Sans', sans-serif; }
 
 textarea:-ms-input-placeholder {
   color: #707070; }
@@ -590,8 +595,8 @@ textarea {
     background: transparent;
     border: none;
     border-bottom: 2px solid #fff;
-    text-indent: 10px;
-    padding: 10px 0;
+    text-indent: 2px;
+    padding: 10px;
     border-radius: 0; }
   .estimate__form-comment {
     margin-top: 65px;
@@ -644,7 +649,6 @@ textarea {
     font-size: 1.4em;
     color: #fff; }
     .estimate__form-checkbox-pi-text--link {
-      display: block;
       font-weight: bold;
       color: #fff; }
   .estimate__form-submit {
@@ -685,6 +689,8 @@ textarea {
     text-align: right; }
     .promo__academy img {
       width: 170px; }
+  .promo__academy-link {
+    display: inline-block; }
 
 .clients {
   padding: 80px 0 40px; }
@@ -992,6 +998,8 @@ textarea {
     text-align: right; }
     .promo-blog__academy img {
       width: 170px; }
+  .promo-blog__academy-link {
+    display: inline-block; }
 
 .articles--top {
   padding: 35px 0 0; }
@@ -1057,6 +1065,8 @@ textarea {
         width: 100%; }
   .article__title {
     position: absolute;
+    left: 0;
+    top: 0;
     font-size: 2em;
     color: #fff;
     padding: 15px; }
@@ -1204,9 +1214,7 @@ textarea {
         left: -100px;
         top: -60px; }
     .estimate__form-input {
-      text-indent: 20px; }
-    .estimate__form-comment {
-      text-indent: 20px; }
+      padding: 10px 20px; }
     .promo__container {
       padding: 0 40px; }
     .clients__container {
@@ -1472,7 +1480,7 @@ textarea {
         left: -150px;
         top: -90px; }
     .estimate__form-input {
-      text-ident: 30px;
+      padding: 10px 30px;
       font-size: 2em; }
     .estimate__form-comment {
       padding: 15px 35px;

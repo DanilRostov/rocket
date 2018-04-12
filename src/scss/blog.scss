@@ -27,6 +27,10 @@
 		}
 	}
 
+	&__academy-link {
+		display: inline-block;
+	}
+
 	@media screen and(min-width: 640px) {
 		& {
 			padding: 85px 0;
@@ -176,6 +180,8 @@
 
 	&__title {
 		position: absolute;
+		left: 0;
+		top: 0;
 		font-size: 2em;
 		color: #fff;
 		padding: 15px;

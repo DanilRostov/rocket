@@ -14,8 +14,9 @@ block page-content
 		div.promo__container
 			h2.promo__title Пожалуй, лучший аутсорс в рунете 
 			h3.promo__subtitle Фронт-энд разработка и поддержка сайтов 
-			a(href="https://htmlacademy.ru", target="_blank").promo__academy
-				img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
+			div.promo__academy
+				a(href="https://htmlacademy.ru", target="_blank").promo__academy-link
+					img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
 
 	//- Block Clients
 	section.clients
@@ -26,7 +27,7 @@ block page-content
 					img(src="img/logos/agima.svg", alt="agima")
 				div.clients__logo-box
 					span.clients__logo-box--done Done.
-					div(style="width: 100%; height: 50%; background-color: rgb(243, 255, 15); position: absolute; z-index: -1; transform: rotate(-3deg);")
+					div(style="width: 100%; height: 50%; background-color: rgb(243, 255, 15); position: absolute; left: 0px; top: 25%; z-index: -1; transform: rotate(-3deg);")
 				div.clients__logo-box
 					img(src="img/logos/pitercssconf.svg", alt="pitercssconf")
 				div.clients__logo-box

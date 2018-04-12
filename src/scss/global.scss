@@ -26,10 +26,14 @@ input::-moz-placeholder { color:#fff; font-style: italic; }
 input:-moz-placeholder { color:#fff; font-style: italic; }
 input:-ms-input-placeholder { color:#fff; font-style: italic; }
 
+button, input, select, textarea {
+  font-family: inherit;
+}
+
 // Цвет placeholder в textarea
 textarea::-webkit-input-placeholder { color:$color-grey; }
-textarea::-moz-placeholder          { color:$color-grey; }
-textarea:-moz-placeholder           { color:$color-grey; }
+textarea::-moz-placeholder          { color:$color-grey; font-family: 'Open Sans', sans-serif; }
+textarea:-moz-placeholder           { color:$color-grey; font-family: 'Open Sans', sans-serif; }
 textarea:-ms-input-placeholder      { color:$color-grey; }
 
 // Фон autofill в input и textarea 
