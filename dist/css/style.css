@@ -504,9 +504,43 @@ textarea {
     margin-top: 5px;
     position: relative; }
   .tarifs__item-price-text {
+    position: relative;
     margin-left: 30px;
     font-size: 2em;
     color: #fff; }
+    .tarifs__item-price-text--one:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../img/icon-pages1.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -27px;
+      top: 2px; }
+    .tarifs__item-price-text--two:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../img/icon-pages2.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -27px;
+      top: 2px; }
+    .tarifs__item-price-text--three:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../img/icon-pages3.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -27px;
+      top: 2px; }
 
 .estimate {
   padding: 45px 0 100px; }
@@ -1400,6 +1434,21 @@ textarea {
     .tarifs__item-price-text {
       font-size: 3.2em;
       margin-left: 60px; }
+      .tarifs__item-price-text--one:before {
+        width: 26px;
+        height: 26px;
+        left: -40px;
+        top: 10px; }
+      .tarifs__item-price-text--two:before {
+        width: 26px;
+        height: 26px;
+        left: -40px;
+        top: 10px; }
+      .tarifs__item-price-text--three:before {
+        width: 26px;
+        height: 26px;
+        left: -40px;
+        top: 10px; }
     .estimate {
       padding: 45px 0 120px; }
     .estimate__container {
@@ -1697,6 +1746,21 @@ textarea {
     .tarifs__item-price-text {
       font-size: 3.8em;
       margin-left: 60px; }
+      .tarifs__item-price-text--one:before {
+        width: 30px;
+        height: 30px;
+        left: -45px;
+        top: 12px; }
+      .tarifs__item-price-text--two:before {
+        width: 30px;
+        height: 30px;
+        left: -45px;
+        top: 12px; }
+      .tarifs__item-price-text--three:before {
+        width: 30px;
+        height: 30px;
+        left: -45px;
+        top: 12px; }
     .estimate__container {
       width: 1170px; }
     .promo__container {

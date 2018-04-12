@@ -351,9 +351,49 @@
 	}
 
 	&__item-price-text {
+		position: relative;
 		margin-left: 30px;
 		font-size: 2em;
 		color: #fff;
+
+		&--one:before {
+			display: block;
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url('../img/icon-pages1.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: -27px;
+    		top: 2px;
+		}
+
+		&--two:before {
+			display: block;
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url('../img/icon-pages2.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: -27px;
+    		top: 2px;
+		}
+
+		&--three:before {
+			display: block;
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url('../img/icon-pages3.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			left: -27px;
+    		top: 2px;
+		}
 	}
 
 	@media screen and(min-width: 640px) {
@@ -403,6 +443,27 @@
 		&__item-price-text {
 			font-size: 3.2em;
 			margin-left: 60px;
+
+			&--one:before {
+				width: 26px;
+				height: 26px;
+				left: -40px;
+    			top: 10px;
+			}
+
+			&--two:before {
+				width: 26px;
+				height: 26px;
+				left: -40px;
+    			top: 10px;
+			}
+
+			&--three:before {
+				width: 26px;
+				height: 26px;
+				left: -40px;
+    			top: 10px;
+			}    
 		}
 	}
 
@@ -414,6 +475,27 @@
 		&__item-price-text {
 			font-size: 3.8em;
 			margin-left: 60px;
+
+			&--one:before {
+				width: 30px;
+			    height: 30px;
+			    left: -45px;
+			    top: 12px;
+			}
+
+			&--two:before {
+				width: 30px;
+			    height: 30px;
+			    left: -45px;
+			    top: 12px;
+			}
+
+			&--three:before {
+				width: 30px;
+			    height: 30px;
+			    left: -45px;
+			    top: 12px;
+			}
 		}
 	}
 }
