@@ -57,6 +57,17 @@
 			background: $bg-gradient;
 			border: none;
 		}
+
+		&--white {
+			color: #fff;
+			border: 4px solid #fff;
+
+			&:hover {
+				padding: 0 35px 0;
+				background: $bg-gradient;
+				border: 4px solid #fff;
+			}
+		}
 	}
 
 	&__burger {

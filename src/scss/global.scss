@@ -1,9 +1,11 @@
 // Сброс основных стилей
+html {overflow-x: hidden;}
 body {	
 	margin: 0; 
 	width: 100%;
 	font-size: 10px;
 	font-family: $ff-main;
+	overflow-x: hidden;
 }
 * {	box-sizing: border-box; }
 img { vertical-align: top; }

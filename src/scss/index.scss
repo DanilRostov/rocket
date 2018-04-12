@@ -32,6 +32,46 @@
 		display: inline-block;
 	}
 
+	&__planet1 {
+		position: absolute;
+	    width: 1125px;
+	    right: -490px;
+    	top: -600px;
+	    z-index: -1;
+	}
+
+	&__planet2 {
+		position: absolute;
+	    width: 235px;
+	    left: 275px;
+	    top: -226px;
+	    z-index: -1;
+	}
+
+	&__planet3 {
+		position: absolute;
+	    width: 150px;
+	    right: -75px;
+	    top: 20px;
+	    z-index: -1;
+	}
+
+	&__planet4 {
+		position: absolute;
+	    width: 200px;
+	    right: 75px;
+	    top: 85px;
+	    z-index: -1;
+	}
+
+	&__planet5 {
+		position: absolute;
+	    width: 680px;
+	    left: -407px;
+	    top: 40px;
+	    z-index: -1;
+	}
+
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();

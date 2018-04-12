@@ -4,11 +4,15 @@
   font-weight: 500;
   font-style: normal; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   margin: 0;
   width: 100%;
   font-size: 10px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -145,6 +149,13 @@ textarea {
       color: #fff;
       background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
       border: none; }
+    .header__order--white {
+      color: #fff;
+      border: 4px solid #fff; }
+      .header__order--white:hover {
+        padding: 0 35px 0;
+        background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
+        border: 4px solid #fff; }
   .header__burger {
     position: relative;
     width: 54px;
@@ -691,6 +702,36 @@ textarea {
       width: 170px; }
   .promo__academy-link {
     display: inline-block; }
+  .promo__planet1 {
+    position: absolute;
+    width: 1125px;
+    right: -490px;
+    top: -600px;
+    z-index: -1; }
+  .promo__planet2 {
+    position: absolute;
+    width: 235px;
+    left: 275px;
+    top: -226px;
+    z-index: -1; }
+  .promo__planet3 {
+    position: absolute;
+    width: 150px;
+    right: -75px;
+    top: 20px;
+    z-index: -1; }
+  .promo__planet4 {
+    position: absolute;
+    width: 200px;
+    right: 75px;
+    top: 85px;
+    z-index: -1; }
+  .promo__planet5 {
+    position: absolute;
+    width: 680px;
+    left: -407px;
+    top: 40px;
+    z-index: -1; }
 
 .clients {
   padding: 80px 0 40px; }
@@ -1152,6 +1193,16 @@ textarea {
     cursor: pointer; }
     .subscription__submit:hover {
       background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5); }
+
+.subscription__email:-webkit-autofill,
+.subscription__email:-webkit-autofill:hover,
+.subscription__email:-webkit-autofill:focus
+.subscription__email:-webkit-autofill {
+  -webkit-text-fill-color: #707070;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%); }
 
 .main__container {
   padding: 0 15px; }
