@@ -16,9 +16,9 @@ block page-content
 		div.audit-promo__container
 			h2.audit-promo__title Технический аудит
 			p.audit-promo__text Мы проводим целый комплекс работ на выявление и устранение ошибок в области оптимизации внутренней архитектуры сайта, удобства сайта для пользователя, в том числе для людей с ограниченными возможностями.
-			a(href="#estimate").audit-promo__order работать с нами
+			a(href="#estimate").audit-promo__order.scroll работать с нами
 			div.audit-promo__academy
-				a(href="#").audit-promo__academy-link
+				a(href="https://htmlacademy.ru", target="_blank").audit-promo__academy-link
 					img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
 			
 	
@@ -26,7 +26,7 @@ block page-content
 	section.tech-audit
 		div.tech-audit__container
 			h2.tech-audit__title Вы получаете
-			p.tech-audit__text.tech-audit__text--first Отчет по всем выявленным ошибкам 
+			p.tech-audit__text.tech-audit__text--first Отчёт по всем выявленным ошибкам 
 			p.tech-audit__text Рекомендации по исправлению всех выявленных ошибок
 			p.tech-audit__text Оценку стоимости и сроков исправления выявленных ошибок
 			p.tech-audit__text Специальные условия при заключении договора доработки сайта
@@ -72,7 +72,7 @@ block page-content
 				div.metriks__item
 					h3.metriks__item-title Соответствие макету
 					div.metriks__item-text-box
-						p.metriks__item-text • Анализ соответствия макетов к выполненной верстке, корректность расположения и отображения элементов
+						p.metriks__item-text • Анализ соответствия макетов к выполненной вёрстке, корректность расположения и отображения элементов
 	
 	//- Block - Tarifs
 	section.tarifs
@@ -120,7 +120,7 @@ block page-content
 		div.estimate__container
 			h2.estimate__title Работать с нами
 			h3.estimate__subtitle Мы поможем не просто найти ошибки, но и устранить их. Оперативная работа над ошибками улучшает качество функционирования сайта и повышает коммерческую отдачу.
-			form.estimate__form
+			form(action="").estimate__form
 				input(name="name", type="text", placeholder="Имя").estimate__form-input
 				input(name="phone", type="tel", placeholder="Телефон").estimate__form-input
 				input(name="email", type="email", placeholder="E-mail").estimate__form-input
@@ -129,7 +129,7 @@ block page-content
 					input#checkbox-pi(type="checkbox").estimate__form-checkbox-pi
 					label.estimate__form-checkbox-pi-label(for="checkbox-pi")
 					span.estimate__form-checkbox-pi-text Я согласен(на) на обработку персональных данных в соответствии с 
-						a(href="#").estimate__form-checkbox-pi-text--link политикой конфиденциальности
+						a(target="_blank", href="#").estimate__form-checkbox-pi-text--link Политикой конфиденциальности
 				input(name="submit-form", type="submit", value="Оставить заявку").estimate__form-submit
 
 

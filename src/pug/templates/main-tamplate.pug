@@ -15,13 +15,13 @@ html(lang="ru")
 				a(href="index.html").header__logo ракета
 				div.header__menu.menu
 					block menu
-				a.header__order(href="#estimate") оставить заявку
+				a.header__order.scroll(href="#estimate") оставить заявку
 				div.header__burger
 					input.burger-checkbox(type='checkbox')
 					span
 				
 				div.scroll-up
-					a(href="#header").scroll-up__icon
+					a(href="#header").scroll-up__icon.scroll
 
 		//- Block Page-Content
 		block page-content
@@ -39,7 +39,7 @@ html(lang="ru")
 						| ООО «Ракета»
 					div.footer__menu.menu
 						block menu
-					a(href="#estimate").footer__order оставить заявку
+					a(href="#estimate").footer__order.scroll оставить заявку
 
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
 		script(src="libs/libs.min.js")

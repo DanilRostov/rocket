@@ -1,0 +1,15 @@
+extends templates/main-tamplate.pug
+
+block title
+	title Rocket - Блог
+
+block menu
+	-var selected = 'статья';
+	+menu(selected)
+
+block page-content
+
+	//- Block Main
+	section.main
+		div.main__container
+			h1 Тут будет статья...

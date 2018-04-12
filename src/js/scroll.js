@@ -1,8 +1,7 @@
-$("a").click(function () {
+$(".scroll").click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;
 
     $('html, body').animate({ scrollTop: destination }, 300);
-    console.log(2);
     return false;
 });

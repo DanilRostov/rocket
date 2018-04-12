@@ -1,0 +1,25 @@
+// Block Main
+.main {
+
+	&__container {
+		@include container320();
+	}
+
+	@media screen and(min-width: 650px) {
+		&__container {
+			@include container640();
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}

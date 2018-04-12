@@ -15,5 +15,113 @@ block page-content
 			h2.promo-blog__title Делимся знаниями
 			h3.promo-blog__subtitle У нас есть много классных мыслей и мы готовы делиться ими
 			div.promo-blog__academy
-				a(href="#").promo-blog__academy-link
+				a(href="https://htmlacademy.ru", target="_blank").promo-blog__academy-link
 					img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
+
+	//- Block Articles--top
+	section.articles.articles--top
+		div.articles__container
+			div.articles__grid
+				
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article3.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article2.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article1.png", alt="article1")
+						span.article__title В любой непонятной ситуации продолжай развиваться
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article3.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+	
+	//- Block Subscription
+	section.subscription
+		div.subscription__container
+			h2.subscription__title Подпишись на обновления в блоге Ракеты
+			form(action="").subscription__form
+				input(name="subscription-email", type="email", placeholder="E-mail").subscription__email
+				input(name="submit-form", type="submit", value="Подписаться").subscription__submit
+
+
+	//- Block Articles--bottom
+	section.articles.articles--bottom
+		div.articles__container
+			div.articles__grid
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article2.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article1.png", alt="article1")
+						span.article__title В любой непонятной ситуации продолжай развиваться
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+							span.article__comments 4 комментария
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+			div.articles__pugination
+				a(href="#").articles__pugination-link.articles__pugination-link--active 1
+				a(href="#").articles__pugination-link 2
+				a(href="#").articles__pugination-link 3
+				a(href="#").articles__pugination-link 4
+				a(href="#").articles__pugination-link 5
+				a(href="#").articles__pugination-nextlink Следующая
+

@@ -17,6 +17,7 @@
 
 @mixin paragraph320() {
 	font-size: 1.8em;
+	color: $color-blue;
 }
 
 // Mixins for 640 and more
@@ -45,6 +46,7 @@
 
 @mixin paragraph() {
 	font-size: 2.5em;
+	color: $color-blue;
 }
 
 // Mixins for 1250 and more

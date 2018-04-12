@@ -183,8 +183,9 @@ textarea {
   position: relative;
   margin-right: 40px;
   font-size: 1.8em;
+  color: #000;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: bold;
   opacity: 0.6; }
   .menu__link:before {
     content: '';
@@ -342,6 +343,7 @@ textarea {
     text-transform: uppercase; }
   .audit-promo__text {
     font-size: 1.8em;
+    color: #3989F5;
     margin-top: 50px;
     max-width: 90%; }
   .audit-promo__order {
@@ -382,6 +384,7 @@ textarea {
     text-transform: uppercase; }
   .tech-audit__text {
     font-size: 1.8em;
+    color: #3989F5;
     position: relative;
     margin-top: 30px;
     margin-left: 50px;
@@ -749,6 +752,7 @@ textarea {
     text-transform: uppercase; }
   .about-us__text {
     font-size: 1.8em;
+    color: #3989F5;
     margin-top: 50px; }
   .about-us__link-box {
     display: -webkit-box;
@@ -793,6 +797,7 @@ textarea {
     text-transform: uppercase; }
   .frontend-promo__text {
     font-size: 1.8em;
+    color: #3989F5;
     margin-top: 50px;
     max-width: 90%; }
   .frontend-promo__order {
@@ -913,6 +918,7 @@ textarea {
       font-size: 3em; }
   .price__text {
     font-size: 1.8em;
+    color: #3989F5;
     position: relative;
     margin-top: 30px;
     margin-left: 50px;
@@ -932,27 +938,189 @@ textarea {
       top: 5px; }
 
 .promo-blog {
-  padding: 50px 0; }
+  padding: 70px 0 35px; }
   .promo-blog__container {
     padding: 0 15px; }
   .promo-blog__title {
     font-size: 3.6em;
     color: #3989F5;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    max-width: 300px; }
   .promo-blog__subtitle {
     margin-top: 50px;
     font-size: 2.2em;
-    color: #3989F5; }
+    color: #3989F5;
+    margin-top: 60px;
+    max-width: 300px; }
   .promo-blog__academy {
-    margin-top: 50px;
+    margin-top: 70px;
     display: block;
     text-align: right; }
     .promo-blog__academy img {
       width: 170px; }
-    @media screen and (min-width: 420px) {
+
+.articles--top {
+  padding: 35px 0 0; }
+
+.articles--bottom {
+  margin-top: 20px;
+  padding: 0 0 80px; }
+
+.articles__container {
+  padding: 0 15px; }
+
+.articles__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.articles__pugination {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2em; }
+
+.articles__pugination-link {
+  color: #707070;
+  border-bottom: 1px solid transparent; }
+  .articles__pugination-link--active {
+    font-weight: bold; }
+  .articles__pugination-link:hover {
+    border-bottom: 1px solid #707070; }
+
+.articles__pugination-nextlink {
+  margin-left: 15px;
+  color: #707070;
+  border-bottom: 1px solid transparent; }
+  .articles__pugination-nextlink:hover {
+    border-bottom: 1px solid #707070; }
+
+.article {
+  margin-top: 20px;
+  padding-bottom: 30px; }
+  .article__promo {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px; }
+    .article__promo--img {
+      background: transparent;
+      padding: 0;
+      height: auto; }
+      .article__promo--img img {
+        width: 100%; }
+  .article__title {
+    position: absolute;
+    font-size: 2em;
+    color: #fff;
+    padding: 15px; }
+  .article__name {
+    margin-top: 10px;
+    font-size: 1.6em;
+    color: #707070;
+    font-weight: bold; }
+  .article__details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #707070; }
+  .article__author {
+    margin-right: 10px; }
+  .article__date {
+    margin-right: 10px; }
+  .article__text {
+    margin-top: 10px;
+    color: #707070;
+    font-size: 1.4em;
+    max-height: 76px;
+    overflow: hidden; }
+  .article__more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.6em;
+    color: #707070;
+    font-weight: bold;
+    border-bottom: 1px solid transparent; }
+    .article__more:hover {
+      border-bottom: 1px solid #707070; }
+
+.subscription {
+  background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5);
+  padding: 40px 0; }
+  .subscription__container {
+    padding: 0 15px; }
+  .subscription__title {
+    text-align: center;
+    font-size: 1.6em;
+    color: #fff;
+    text-transform: uppercase; }
+  .subscription__form {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .subscription__email {
+    width: 49%;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    text-indent: 10px; }
+    .subscription__email::-webkit-input-placeholder {
+      color: #707070; }
+    .subscription__email::-moz-placeholder {
+      color: #707070; }
+    .subscription__email:-moz-placeholder {
+      color: #707070; }
+    .subscription__email:-ms-input-placeholder {
+      color: #707070; }
+  .subscription__submit {
+    width: 49%;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1.4em;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    border-radius: 0;
+    cursor: pointer; }
+    .subscription__submit:hover {
+      background: linear-gradient(45deg, #A14DFE, #8D36F1, #586FF8, #3ABDF5, #4ECFF5); }
+
+.main__container {
+  padding: 0 15px; }
+
+@media screen and (min-width: 320px) {
+    .subscription__submit {
+      font-size: 1.6em; } }
+
+@media screen and (min-width: 420px) {
     .steck__grid {
       padding: 0 0 70px 20%; } }
-    @media screen and (min-width: 640px) {
+
+@media screen and (min-width: 640px) {
     .header {
       padding: 30px 0; }
     .header__container {
@@ -1043,7 +1211,6 @@ textarea {
     .criteria__container {
       padding: 0 40px; }
     .criteria__item {
-      width: 48%;
       padding: 25px; }
     .steck__container {
       padding: 0 40px; }
@@ -1064,10 +1231,42 @@ textarea {
       margin: 40px auto;
       padding: 30px; }
     .promo-blog {
-      padding: 70px 0; }
+      padding: 85px 0; }
     .promo-blog__container {
-      padding: 0 40px; } }
-    @media screen and (min-width: 1024px) {
+      padding: 0 40px; }
+    .promo-blog__title {
+      max-width: 100%; }
+    .promo-blog__subtitle {
+      max-width: 70%; }
+  .articles__container {
+    padding: 0 40px; }
+    .article__promo {
+      padding: 30px;
+      height: 220px; }
+      .article__promo--img {
+        padding: 0;
+        height: auto; }
+    .article__title {
+      font-size: 3em;
+      padding: 20px; }
+    .article__text {
+      max-height: 40px; }
+    .subscription__container {
+      padding: 0 40px; }
+    .subscription__title {
+      font-size: 2em; }
+    .subscription__form {
+      margin-top: 30px; }
+    .subscription__email {
+      font-size: 1.8em; }
+    .subscription__submit {
+      font-size: 2em; } }
+
+@media screen and (min-width: 650px) {
+  .main__container {
+    padding: 0 40px; } }
+
+@media screen and (min-width: 1024px) {
     .header__container {
       width: 100%;
       margin: 0 auto;
@@ -1127,7 +1326,8 @@ textarea {
       color: #3989F5;
       text-transform: uppercase; }
     .audit-promo__text {
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      color: #3989F5; }
     .audit-promo__academy {
       margin-top: 20px; }
       .audit-promo__academy img {
@@ -1171,7 +1371,7 @@ textarea {
       font-size: 1.8em; }
     .metriks__item {
       margin-top: 35px;
-      padding: 30px 10px 10px;
+      padding: 30px 15px 10px;
       width: 30%;
       height: 320px; }
     .metriks__item-text-box {
@@ -1321,6 +1521,7 @@ textarea {
       text-transform: uppercase; }
     .about-us__text {
       font-size: 2.5em;
+      color: #3989F5;
       margin-top: 80px;
       padding: 0 100px; }
     .about-us__link-box {
@@ -1340,7 +1541,8 @@ textarea {
       color: #3989F5;
       text-transform: uppercase; }
     .frontend-promo__text {
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      color: #3989F5; }
     .frontend-promo__academy {
       margin-top: 20px; }
       .frontend-promo__academy img {
@@ -1411,7 +1613,8 @@ textarea {
     .price__cost-text--big {
       font-size: 10em; }
     .price__text {
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      color: #3989F5; }
       .price__text:before {
         width: 45px;
         height: 45px;
@@ -1434,8 +1637,49 @@ textarea {
     .promo-blog__academy {
       margin-top: 120px; }
       .promo-blog__academy img {
-        width: 220px; } }
-    @media screen and (min-width: 1250px) {
+        width: 220px; }
+  .articles__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; }
+  .articles__grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .article {
+      width: 48%; }
+    .article__title {
+      font-size: 3em;
+      padding: 30px; }
+    .subscription__container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .subscription__title {
+      width: 50%; }
+    .subscription__form {
+      margin-top: 0;
+      width: 48%; }
+    .subscription__email {
+      width: 50%; }
+    .subscription__submit {
+      width: 50%; }
+  .main__container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; } }
+
+@media screen and (min-width: 1250px) {
     .header__container {
       width: 1170px; }
   .menu__container {
@@ -1475,6 +1719,12 @@ textarea {
     .price__container {
       width: 1170px; }
     .promo-blog__container {
-      width: 1170px; } }
+      width: 1170px; }
+  .articles__container {
+    width: 1170px; }
+    .subscription__container {
+      width: 1170px; }
+  .main__container {
+    width: 1170px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 // Block Promo-blog
 .promo-blog {
-	padding: 50px 0;
+	padding: 70px 0 35px;
 
 	&__container {
 		@include container320();
@@ -8,14 +8,17 @@
 
 	&__title {
 		@include title320();
+		max-width: 300px;
 	}
 
 	&__subtitle {
 		@include subtitle320();
+		margin-top: 60px;
+		max-width: 300px;
 	}
 
 	&__academy {
-		margin-top: 50px;
+		margin-top: 70px;
 		display: block;
 		text-align: right;
 
@@ -26,11 +29,19 @@
 
 	@media screen and(min-width: 640px) {
 		& {
-			padding: 70px 0;
+			padding: 85px 0;
 		}
 
 		&__container {
 			@include container640();
+		}
+
+		&__title {
+			max-width: 100%;
+		}
+
+		&__subtitle {
+			max-width: 70%;
 		}
 	}
 
@@ -57,6 +68,301 @@
 			& img {
 				width: 220px;
 			}
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Articles
+.articles {
+	&--top {
+		padding: 35px 0 0;
+	}
+
+	&--bottom {
+		margin-top: 20px;
+		padding: 0 0 80px;
+	}
+
+	&__container {
+		@include container320();
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__pugination {
+		margin-top: 50px;
+		text-align: center;
+		font-size: 2em;
+	}
+
+	&__pugination-link {
+		color: $color-grey;
+		border-bottom: 1px solid transparent;
+
+		&--active {
+			font-weight: bold;
+		}
+
+		&:hover {
+			border-bottom: 1px solid $color-grey;
+		}
+	}
+
+	&__pugination-nextlink {
+		margin-left: 15px;
+		color: $color-grey;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom: 1px solid $color-grey;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
+		&__container {
+			@include container640();
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+
+		&__grid {
+			flex-direction: row;
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Article
+.article {
+	margin-top: 20px;
+	padding-bottom: 30px;
+
+	&__promo {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 20px;
+
+		&--img {
+			background: transparent;
+			padding: 0;
+			height: auto;
+
+			& img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		font-size: 2em;
+		color: #fff;
+		padding: 15px;
+	}
+
+	&__name {
+		margin-top: 10px;
+		font-size: 1.6em;
+		color: $color-grey;
+		font-weight: bold;
+	}
+
+	&__details {
+		display: flex;
+    	flex-wrap: wrap;
+		margin-top: 10px;
+		font-size: 1.4em;
+		color: $color-grey;
+	}
+
+	&__author {
+		margin-right: 10px;
+	}
+
+	&__date {
+		margin-right: 10px;
+	}
+
+	&__text {
+		margin-top: 10px;
+		color: $color-grey;
+		font-size: 1.4em;
+		max-height: 76px;
+		overflow: hidden;
+	}
+
+	&__more {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 1.6em;
+		color: $color-grey;
+		font-weight: bold;
+		border-bottom: 1px solid transparent;
+
+		&:hover {
+			border-bottom: 1px solid $color-grey;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
+		&__promo {
+			padding: 30px;
+			height: 220px;
+
+			&--img {
+				padding: 0;
+				height: auto;
+			}
+		}
+
+		&__title {
+			font-size: 3em;
+			padding: 20px;
+		}
+
+		&__text {
+			max-height: 40px;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		& {
+			width: 48%;
+		}
+
+		&__title {
+			font-size: 3em;
+			padding: 30px;
+		}
+	}
+}
+
+// Block Subscription
+.subscription {
+	background: $bg-gradient;
+	padding: 40px 0;
+	
+	&__container {
+		@include container320();
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 1.6em;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	&__form {
+		margin-top: 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__email {
+		width: 49%;
+		border: none;
+		padding: 10px;
+		border-radius: 0;
+		font-size: 1.4em;
+		font-style: italic;
+		text-indent: 10px;
+
+		&::-webkit-input-placeholder { color: $color-grey; }
+		&::-moz-placeholder { color: $color-grey; }
+		&:-moz-placeholder { color: $color-grey; }
+		&:-ms-input-placeholder { 	color: $color-grey; }
+	} 
+
+	&__submit {
+		width: 49%;
+		padding: 10px;
+		background-color: transparent;
+		font-size: 1.4em;
+		color: #fff;
+		text-transform: uppercase;
+		border: 2px solid #fff;
+		border-radius: 0;
+		cursor: pointer;
+
+		&:hover {
+			background: $bg-gradient;
+		}
+	}
+
+	@media screen and(min-width: 320px) {
+		&__submit {
+			font-size: 1.6em;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
+		&__container {
+			@include container640();
+		}
+
+		&__title {
+			font-size: 2em;
+		}
+
+		&__form {
+			margin-top: 30px;
+		}
+
+		&__email {
+			font-size: 1.8em;
+		}
+
+		&__submit {
+			font-size: 2em;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+			display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+		}
+
+		&__title {
+			width: 50%;
+		}
+
+		&__form {
+			margin-top: 0;
+			width: 48%;
+		}
+
+		&__email {
+			width: 50%;
+		}
+
+		&__submit {
+			width: 50%;
 		}
 	}
 
