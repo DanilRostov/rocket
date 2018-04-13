@@ -10,10 +10,17 @@
   <defs>
     <filter id="shadow" x="-100%" y="-100%" width="400%" height="400%">
       <feOffset result="offOut" in="SourceGraphic" dx="0" dy="70" />
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="50" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="40" />
       <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+       <feMerge> 
+          <feMergeNode/>
+          <feMergeNode in="SourceGraphic"/> 
+     </feMerge>
     </filter>
   </defs>
   
-  <circle id="planet" cx="250" cy="150" fill="url(#linear-gradient)" filter="url(#shadow)" r="100" />
+  <circle id="planet" cx="250" cy="150"  filter="url(#shadow)" fill="url(#linear-gradient)" r="100" />
 </svg>
