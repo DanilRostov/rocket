@@ -14,6 +14,8 @@ h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
 .position-fixed {
 	position: fixed;
 	background-color: #000;
+	overflow: hidden;
+	z-index: -999;
 }
 
 // Сброс стилей для a и button

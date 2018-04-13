@@ -54,6 +54,34 @@
 		display: inline-block;
 	}
 
+	&__space {
+	    position: absolute;
+	    width: 1000px;
+	    top: -500px;
+	    right: -748px;
+	    z-index: -2;
+	}
+
+	&__planet1 {
+		position: absolute;
+	    width: 150px;
+	    top: 26px;
+	    right: -38px;
+	    z-index: -1;
+	}
+
+	&__planet2 {
+		position: absolute;
+	    width: 249px;
+	    top: 200px;
+	    right: -126px;
+	    z-index: -1;
+	}
+
+	&__planet3 {
+		display: none;
+	}
+
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
@@ -69,7 +97,16 @@
 		}
 
 		&__text {
-			width: 80%;
+			max-width: 90%;
+		}
+
+		&__space {
+			right: -560px;
+		}
+
+		&__planet2 {
+			top: 155px;
+    		right: -20px;
 		}
 	}
 
@@ -101,6 +138,31 @@
 		&__order {
 			width: auto;
 			margin-top: 60px;
+		}
+
+		&__space {
+			width: 1200px;
+		    top: -300px;
+		    left: 463px;  
+		}
+
+		&__planet1 {
+			width: 217px;
+    		top: -99px;
+		}
+
+		&__planet2 {
+			width: 420px;
+			top: 64px;
+    		right: -170px;
+		}
+
+		&__planet3 {
+			position: absolute;
+			width: 130px;
+		    top: -103px;
+		    left: 450px;
+			display: block;
 		}
 	}
 
@@ -232,6 +294,10 @@
 		color: #fff;
 	}
 
+	&__space {
+		display: none;
+	}
+
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
@@ -253,6 +319,7 @@
 
 		&__container {
 			@include container1024();
+			position: relative;
 		}
 
 		&__title {
@@ -278,6 +345,15 @@
 
 		&__item-text-box {
 			display: block;
+		}
+
+		&__space {
+			display: block;
+		    position: absolute;
+		    width: 1343px;
+		    left: -709px;
+		    top: 160px;
+		    z-index: -2;
 		}
 	}
 

@@ -54,6 +54,35 @@
 		display: inline-block;
 	}
 
+	&__planet {
+		position: absolute;
+	    width: 150px;
+	    top: -38px;
+	    right: 5px;
+	    z-index: -1;
+	}
+
+	&__planet2 {
+		display: none;
+	}
+
+	&__planet3 {
+		display: none;
+	}
+
+	&__space {
+		position: absolute;
+	    width: 800px;
+	    top: -250px;
+	    left: 136px;
+	    transform: rotate(38deg);
+	    z-index: -2;
+	}
+
+	&__space2 {
+		display: none;
+	}
+
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
@@ -70,6 +99,16 @@
 
 		&__text {
 			width: 80%;
+		}
+
+		&__space {
+		    width: 1200px;
+		    top: -451px;
+		    left: 306px;
+		}
+
+		&__planet {
+			width: 200px;
 		}
 	}
 
@@ -101,6 +140,45 @@
 		&__order {
 			width: auto;
 			margin-top: 60px;
+		}
+
+		&__space {
+			width: 1200px;
+		    top: -77px;
+		    left: 463px;    
+		}
+
+		&__space2 {
+			position: absolute;
+		    width: 1000px;
+		    left: -612px;
+		    top: -464px;
+		    display: block;
+		    z-index: -2;
+		}
+
+		&__planet {
+			width: 260px;
+			top: -118px;
+    		right: -95px;
+		}
+
+		&__planet2 {
+			position: absolute;
+			width: 500px;
+			right: -114px;
+   			top: 25px;
+			display: block;
+			z-index: -1;
+		}
+
+		&__planet3 {
+			position: absolute;
+			width: 160px;
+		    left: -24px;
+		    top: -115px;
+			display: block;
+			z-index: -1;
 		}
 	}
 
@@ -179,6 +257,7 @@
 	
 	&__container {
 		@include container320();
+		position: relative;
 	}
 
 	&__title {
@@ -188,7 +267,7 @@
 	&__grid {
 		position: relative;
 		margin-top: 50px;
-		padding: 0 0 70px 10%;
+		padding: 0 0 70px 30px;
 	}
 
 	&__img {
@@ -212,9 +291,21 @@
 		font-size: 1.6em;
 	}
 
+	&__planet {
+		position: absolute;
+		width: 200px;
+		left: -53px;
+    	bottom: -120px;
+		z-index: 1;
+	}
+
 	@media screen and(min-width: 420px) {
 		&__grid {
-    		padding: 0 0 70px 20%;
+    		padding: 0 0 70px 90px;
+		}
+
+		&__planet {
+			left: 5px;
 		}
 	}
 
@@ -224,7 +315,11 @@
 		}
 
 		&__grid {
-    		padding: 0 0 70px 25%;
+    		padding: 0 0 70px 150px;
+		}
+
+		&__planet {
+			left: 91px;
 		}
 
 		&__img {
@@ -260,6 +355,12 @@
 			padding: 0;
 			text-align: center;
 			margin-right: 40px;
+		}
+
+		&__planet {
+			width: 300px;
+		    bottom: -315px;
+		    left: 46.85%;
 		}
 
 		&__img {

@@ -4,6 +4,7 @@
 
 	&__container {
 		@include container320();
+		position: relative;
 	}
 
 	&__title {
@@ -31,6 +32,50 @@
 		display: inline-block;
 	}
 
+	&__space1 {
+		position: absolute;
+		width: 1000px;
+		left: 75px;
+    	top: -583px;
+		z-index: -2;
+	}
+
+	&__space2 {
+		display: none;
+	}
+
+	&__planet1 {
+		position: absolute;
+	    width: 100px;
+	    top: -74px;
+	    left: 183px;
+	    z-index: -1;
+	}
+
+	&__planet2 {
+		position: absolute;
+		width: 200px;
+		top: 0;
+    	right: -15px;
+		z-index: -1;
+	}
+
+	&__planet3 {
+		position: absolute;
+		width: 125px;
+    	top: 192px;
+    	right: 42px;
+		z-index: -1;
+	}
+
+	&__planet4 {
+		display: none;
+	}
+
+	&__planet5 {
+		display: none;
+	}
+
 	@media screen and(min-width: 640px) {
 		& {
 			padding: 85px 0;
@@ -46,6 +91,25 @@
 
 		&__subtitle {
 			max-width: 70%;
+		}
+
+		&__space1 {
+			width: 1200px;
+			left: 130px;
+		}
+
+		&__planet1 {
+    		top: -117px;
+    		right: 136px;
+    		left: auto;
+		}
+
+		&__planet2 {
+			top: -20px;
+		}
+
+		&__planet3 {
+			top: 135px;
 		}
 	}
 
@@ -72,6 +136,53 @@
 			& img {
 				width: 220px;
 			}
+		}
+
+		&__space1 {
+			display: none;
+		}
+
+		&__space2 {
+			display: block;
+		    position: absolute;
+		    width: 1200px;
+		    left: -356px;
+		    top: -607px;
+		    z-index: -2;
+		}
+
+		&__planet1 {
+			width: 225px;
+			right: 80px;
+		}
+
+		&__planet2 {
+			top: 45px;
+			width: 175px;
+			right: -50px;
+		}
+
+		&__planet3 {
+			right: 245px;
+			top: 185px;
+		}
+
+		&__planet4 {
+			display: block;
+			position: absolute;
+			width: 100px;
+			top: -90px;
+			left: 0;
+			z-index: -1;
+		}
+
+		&__planet5 {
+			display: block;
+			position: absolute;
+			width: 500px;
+			top: 150px;
+    		left: -318px;
+			z-index: -1;
 		}
 	}
 
