@@ -10,10 +10,10 @@
   <defs>
     <filter id="shadow" x="-100%" y="-100%" width="400%" height="400%">
       <feOffset result="offOut" in="SourceGraphic" dx="0" dy="70" />
-      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="40" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="20" />
       <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
       <feComponentTransfer>
-        <feFuncA type="linear" slope="0.6"/>
+        <feFuncA type="linear" slope="0.3"/>
       </feComponentTransfer>
        <feMerge> 
           <feMergeNode/>
