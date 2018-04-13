@@ -34,55 +34,91 @@
 
 	&__planet1 {
 		position: absolute;
-	    width: 1125px;
-	    right: -490px;
-    	top: -600px;
+	    width: 500px;
+	    right: -246px;
+	    top: -256px;
 	    z-index: -1;
 	}
 
 	&__planet2 {
 		position: absolute;
-	    width: 235px;
-	    left: 275px;
-	    top: -226px;
+	    width: 90px;
+	    right: -40px;
+	    top: 40px;
 	    z-index: -1;
 	}
 
 	&__planet3 {
-		position: absolute;
-	    width: 150px;
-	    right: -75px;
-	    top: 20px;
+	    position: absolute;
+	    width: 100px;
+	    right: 30px;
+	    top: 137px;
 	    z-index: -1;
 	}
 
 	&__planet4 {
 		position: absolute;
-	    width: 200px;
-	    right: 75px;
-	    top: 85px;
+	    width: 85px;
+	    right: 97px;
+	    top: -70px;
 	    z-index: -1;
 	}
 
 	&__planet5 {
 		position: absolute;
-	    width: 680px;
-	    left: -407px;
-	    top: 40px;
+	    width: 300px;
+	    left: -135px;
+	    top: 302px;
 	    z-index: -1;
 	}
 
 	&__space {
 		position: absolute;
-	    width: 1480px;
-	    right: -511px;
-	    top: -599px;
+	    width: 669px;
+	    right: -277px;
+	    top: -275px;
 	    z-index: -2;
 	}
+
+	
 
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
+		}
+
+		&__planet1 {
+			width: 800px;
+		    right: -290px;
+		    top: -380px;
+		}
+
+		&__planet2 {
+			width: 130px;
+		    right: -63px;
+		    top: 40px;
+		}
+
+		&__planet3 {
+			width: 165px;
+		    right: 175px;
+		    top: 90px;
+		}
+
+		&__planet4 {
+			width: 100px;
+		    right: 340px;
+		    top: -70px;
+		}
+
+		&__planet5 {
+
+		}
+
+		&__space {
+			width: 1200px;
+		    right: -412px;
+		    top: -466px;
 		}
 	}
 
@@ -114,6 +150,42 @@
 			& img {
 				width: 220px;
 			}
+		}
+
+		&__planet1 {
+		    width: 1125px;
+		    right: -490px;
+	    	top: -600px;
+		}
+
+		&__planet2 {
+		    width: 235px;
+		    left: 275px;
+		    top: -226px;
+		}
+
+		&__planet3 {
+		    width: 150px;
+		    right: -75px;
+		    top: 20px;
+		}
+
+		&__planet4 {
+		    width: 200px;
+		    right: 75px;
+		    top: 85px;
+		}
+
+		&__planet5 {
+		    width: 680px;
+		    left: -407px;
+		    top: 40px;
+		}
+
+		&__space {
+		    width: 1520px;
+		    right: -550px;
+		    top: -599px;
 		}
 	}
 
@@ -223,6 +295,7 @@
 
 // Block Reviews
 .reviews {
+	position: relative;
 	padding: 40px 0 40px;
 
 	&__container {
@@ -241,6 +314,7 @@
 	&__slide {
 		padding: 20px 10px;
 		border: 4px solid #6DC0F7;
+		background-color: #fff;
 	}
 
 	&__slide-text {
@@ -271,6 +345,24 @@
 		text-align: center;
 	}
 
+	&__space {
+		position: absolute;
+	    width: 1000px;
+	    left: -300px;
+	    top: -200px;
+	    z-index: -2;
+	}
+
+	&__planet {
+		position: absolute;
+	    width: 400px;
+	    right: -200px;
+	    top: 155px;
+	    z-index: -1;
+	}
+
+	   
+
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
@@ -278,6 +370,18 @@
 
 		&__slide-text {
 			height: 60px;
+		}
+
+		&__space {
+			width: 1800px;
+		    left: -450px;
+		    top: -290px;
+		}
+
+		&__planet {
+			width: 600px;
+		    right: -260px;
+		    top: 120px;
 		}
 	}
 	
@@ -319,6 +423,18 @@
 
 		&__slider-pagination {
 			margin-top: 80px;
+		}
+
+		&__space {
+		    width: 2400px;
+		    left: -445px;
+		    top: -355px;
+		}
+
+		&__planet {
+		    width: 1113px;
+		    right: -450px;
+		    top: 170px;
 		}
 	}
 

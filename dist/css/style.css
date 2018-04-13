@@ -84,6 +84,8 @@ textarea {
 
 .header {
   padding: 15px 0; }
+  .header--menu-active {
+    padding: 0; }
   .header__container {
     padding: 0 15px;
     position: relative;
@@ -96,6 +98,8 @@ textarea {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .header__container--menu-active {
+      padding: 0; }
   .header__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -129,6 +133,26 @@ textarea {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
+    .header__menu--active {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      background-color: #fff;
+      z-index: 10000; }
   .header__order {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,6 +217,17 @@ textarea {
         transition: 0.3s; }
       .header__burger span:after {
         top: 15px; }
+    .header__burger--white span {
+      background: #fff; }
+      .header__burger--white span:before, .header__burger--white span:after {
+        background: #fff; }
+    .header__burger--active {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      z-index: 10001; }
+      .header__burger--active span:before, .header__burger--active span:after {
+        background: #707070; }
 
 .menu__link {
   width: 100%;
@@ -219,12 +254,13 @@ textarea {
   .menu__link:hover:before {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1); }
+  .menu__link--mobile {
+    width: auto;
+    margin-top: 15px;
+    color: #707070;
+    font-size: 4em; }
   .menu__link--active {
     color: #3989F5; }
-  .menu__link--mobile {
-    margin-top: 15px;
-    color: #fff;
-    font-size: 4em; }
 
 .scroll-up {
   position: absolute;
@@ -591,6 +627,8 @@ textarea {
       height: 150px;
       left: -150px;
       top: -90px;
+      left: -75px;
+      top: -45px;
       background-image: url(../img/planet.svg);
       background-repeat: no-repeat;
       background-size: contain; }
@@ -704,39 +742,39 @@ textarea {
     display: inline-block; }
   .promo__planet1 {
     position: absolute;
-    width: 1125px;
-    right: -490px;
-    top: -600px;
+    width: 500px;
+    right: -246px;
+    top: -256px;
     z-index: -1; }
   .promo__planet2 {
     position: absolute;
-    width: 235px;
-    left: 275px;
-    top: -226px;
+    width: 90px;
+    right: -40px;
+    top: 40px;
     z-index: -1; }
   .promo__planet3 {
     position: absolute;
-    width: 150px;
-    right: -75px;
-    top: 20px;
+    width: 100px;
+    right: 30px;
+    top: 137px;
     z-index: -1; }
   .promo__planet4 {
     position: absolute;
-    width: 200px;
-    right: 75px;
-    top: 85px;
+    width: 85px;
+    right: 97px;
+    top: -70px;
     z-index: -1; }
   .promo__planet5 {
     position: absolute;
-    width: 680px;
-    left: -407px;
-    top: 40px;
+    width: 300px;
+    left: -135px;
+    top: 302px;
     z-index: -1; }
   .promo__space {
     position: absolute;
-    width: 1480px;
-    right: -511px;
-    top: -599px;
+    width: 669px;
+    right: -277px;
+    top: -275px;
     z-index: -2; }
 
 .clients {
@@ -782,6 +820,7 @@ textarea {
       font-size: 35px; }
 
 .reviews {
+  position: relative;
   padding: 40px 0 40px; }
   .reviews__container {
     padding: 0 15px;
@@ -794,7 +833,8 @@ textarea {
     margin-top: 50px; }
   .reviews__slide {
     padding: 20px 10px;
-    border: 4px solid #6DC0F7; }
+    border: 4px solid #6DC0F7;
+    background-color: #fff; }
   .reviews__slide-text {
     display: block;
     text-align: center;
@@ -815,6 +855,18 @@ textarea {
   .reviews__slider-pagination {
     margin-top: 40px;
     text-align: center; }
+  .reviews__space {
+    position: absolute;
+    width: 1000px;
+    left: -300px;
+    top: -200px;
+    z-index: -2; }
+  .reviews__planet {
+    position: absolute;
+    width: 400px;
+    right: -200px;
+    top: 155px;
+    z-index: -1; }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 20px; }
@@ -1274,6 +1326,26 @@ textarea {
       padding: 10px 20px; }
     .promo__container {
       padding: 0 40px; }
+    .promo__planet1 {
+      width: 800px;
+      right: -290px;
+      top: -380px; }
+    .promo__planet2 {
+      width: 130px;
+      right: -63px;
+      top: 40px; }
+    .promo__planet3 {
+      width: 165px;
+      right: 175px;
+      top: 90px; }
+    .promo__planet4 {
+      width: 100px;
+      right: 340px;
+      top: -70px; }
+    .promo__space {
+      width: 1200px;
+      right: -412px;
+      top: -466px; }
     .clients__container {
       padding: 0 40px; }
     .clients__logo-box {
@@ -1286,6 +1358,14 @@ textarea {
       padding: 0 40px; }
     .reviews__slide-text {
       height: 60px; }
+    .reviews__space {
+      width: 1800px;
+      left: -450px;
+      top: -290px; }
+    .reviews__planet {
+      width: 600px;
+      right: -260px;
+      top: 120px; }
     .about-us__container {
       padding: 0 40px; }
     .about-us__link-box {
@@ -1573,6 +1653,30 @@ textarea {
       margin-top: 120px; }
       .promo__academy img {
         width: 220px; }
+    .promo__planet1 {
+      width: 1125px;
+      right: -490px;
+      top: -600px; }
+    .promo__planet2 {
+      width: 235px;
+      left: 275px;
+      top: -226px; }
+    .promo__planet3 {
+      width: 150px;
+      right: -75px;
+      top: 20px; }
+    .promo__planet4 {
+      width: 200px;
+      right: 75px;
+      top: 85px; }
+    .promo__planet5 {
+      width: 680px;
+      left: -407px;
+      top: 40px; }
+    .promo__space {
+      width: 1520px;
+      right: -550px;
+      top: -599px; }
     .clients {
       padding: 100px 0 90px; }
     .clients__container {
@@ -1618,6 +1722,14 @@ textarea {
       font-size: 2em; }
     .reviews__slider-pagination {
       margin-top: 80px; }
+    .reviews__space {
+      width: 2400px;
+      left: -445px;
+      top: -355px; }
+    .reviews__planet {
+      width: 1113px;
+      right: -450px;
+      top: 170px; }
     .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
       margin: 0 40px; }
     .swiper-pagination-bullet {

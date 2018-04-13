@@ -14,12 +14,13 @@ html(lang="ru")
 			div.header__container
 				a(href="index.html").header__logo ракета
 				div.header__menu.menu
-					block menu
+						block menu
 				block order-btn-box
 					a.header__order.scroll(href="#estimate") оставить заявку
-				div.header__burger
-					input.burger-checkbox(type='checkbox')
-					span
+				block burger
+					div.header__burger
+						input.burger-checkbox(type='checkbox')
+						span
 				
 				div.scroll-up
 					a(href="#header").scroll-up__icon.scroll

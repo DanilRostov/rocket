@@ -10,6 +10,11 @@ block menu
 block order-btn-box
 	a.header__order.header__order--white.scroll(href="#estimate") оставить заявку
 
+block burger
+	div.header__burger.header__burger--white
+		input.burger-checkbox(type='checkbox')
+		span
+
 block page-content
 
 	//- Block Promo
@@ -62,17 +67,19 @@ block page-content
 				div.swiper-wrapper
 					div.swiper-slide.reviews__slide 
 						span.reviews__slide-text «Чувственнная вёрстка»
-						span.reviews__slide-author Василий Пупкин
+						span.reviews__slide-author Василий Семёнов
 						span.reviews__slide-company Интернет-магазин
 					div.swiper-slide.reviews__slide
-						span.reviews__slide-text «Чётче не бывает»
+						span.reviews__slide-text «Лучше не бывает»
 						span.reviews__slide-author Мария Федорова
-						span.reviews__slide-company агенство "Лунный свет"
+						span.reviews__slide-company Агенство "Лунный свет"
 					div.swiper-slide.reviews__slide
 						span.reviews__slide-text «Неожиданно хорошо»
-						span.reviews__slide-author Василий Пупкин
-						span.reviews__slide-company дизайн-студия "Магнификат"
+						span.reviews__slide-author Андрей Петров
+						span.reviews__slide-company Дизайн-студия "Магнификат"
 				div.reviews__slider-pagination
+		img(src="img/planet.svg", alt="planet").reviews__planet
+		img(src="img/space2.png", alt="space2").reviews__space
 	
 	//- Block About-us
 	section.about-us

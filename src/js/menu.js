@@ -1,22 +1,21 @@
 $('.header__burger').click(function() {
-	$('.header__menu').css({
-		'display': 'flex',
-		'background-color': '#000',
-		'padding-bottom' : '50px'
-	});
+	$('.header__menu').addClass('header__menu--active');
+	$('.header__container').addClass('header__container--menu-active');
+	$('.header').addClass('header--menu-active');
 	$('body').addClass('position-fixed');
 	$('.menu__link').addClass('menu__link--mobile');
-	$('.about-audit__planet1').css('z-index', '-1');
-	$('.about-audit__title').css('display', 'none');
+	$('.header__burger').addClass('header__burger--active');
 });
 
 $('.header__burger').click(function() {
 	if( !$('.burger-checkbox').prop('checked') === true ) {
-		$('body').removeClass('position-fixed');
-		$('.header__menu').css('display', 'none');
+		$('.header__burger').removeClass('header__burger--active');
 		$('.burger-checkbox').prop('checked', false);
 		$('.menu__link').removeClass('menu__link--mobile');
-		$('.about-audit__planet1').css('z-index', '10');
+		$('body').removeClass('position-fixed');
+		$('.header').removeClass('header--menu-active');
+		$('.header__container').removeClass('header__container--menu-active');
+		$('.header__menu').removeClass('header__menu--active');
 	}
 });
 
