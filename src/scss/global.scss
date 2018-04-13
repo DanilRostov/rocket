@@ -1,5 +1,5 @@
 // Сброс основных стилей
-html {overflow-x: hidden;}
+html {overflow-x: hidden; }
 body {	
 	margin: 0; 
 	width: 100%;
@@ -12,10 +12,8 @@ img { vertical-align: top; }
 h1, h2, h3, h4, p, ul, li {	margin: 0; padding: 0; }
 
 .position-fixed {
-	position: fixed;
-	background-color: #000;
+	// position: fixed;
 	overflow: hidden;
-	z-index: -999;
 }
 
 // Сброс стилей для a и button

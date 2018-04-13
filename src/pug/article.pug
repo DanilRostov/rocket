@@ -9,7 +9,82 @@ block menu
 
 block page-content
 
-	//- Block Main
-	section.main
-		div.main__container
-			h1 Тут будет статья...
+	//- Block Breadcrumbs
+	div.breadcrumbs
+		div.breadcrumbs__container
+			a(href="index.html").breadcrumbs__link Главная
+			span.breadcrumbs__link  - 
+			a(href="blog.html").breadcrumbs__link Блог
+			span.breadcrumbs__link  - 
+			a(href="article.html").breadcrumbs__link.breadcrumbs__link--current Расшифровка доклада Open Epic#6
+
+	//- Block Article-header
+	section.article-header
+		div.article-header__container
+			h3.article-header__title Расшифровка доклада Open Epic#6
+			span.article-header__author Сергей Попов
+			span.article-header__date 1.01.2018
+			span.article-header__tags Теги: развитие, freelance, html
+
+	//- Block Article-promo
+	section.article-promo
+		div.article-promo__container
+			h2.article-promo__title В любой непонятной ситуации продолжай развиваться
+			img(src="img/planet.svg", alt="planet1").article-promo__planet1
+			img(src="img/planet.svg", alt="planet2").article-promo__planet2
+			img(src="img/planet.svg", alt="planet3").article-promo__planet3
+	
+	//- Block Article-academy
+	div.article-academy
+		div.article-academy__container
+			a(href="https://htmlacademy.ru", target="_blank").article-academy__link
+				img(src="img/logos/htmlacademy.svg", alt="htmlacademy")
+
+	//- Block Article-body
+	section.article-body
+		div.article-body__container
+			p.article-body__paragraph.article-body__paragraph--first Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой непонятной ситуации. На деле это устойчивое выражение, которое мы просто привыкли использовать. Все хоть раз слышал это выражение.
+			p.article-body__paragraph На деле я не согласен, в принципе, с этой фразой, потому что верю, что если что-то пошло не так, то это означает изначальный сдвиг на пути развития. Непонятные ситуации в принципе понятие растяжимое и непонятно, что именно считать непонятной ситуацией.
+			p.article-body__paragraph Учитывая это, скажем — в любой ситуации продолжайте развиваться. Всегда. Каждый день просыпаясь с утра, вы должны думать о том, что сегодня вечером статнете лучше, чем были утром. Я пришел к этому с постановки цели. Сначала я ставил себе глобальные цели, например на один год. Стал делать это не так давно, поэтому у был один полноценный план на год.
+			p.article-body__paragraph Планы на один год не работают. Просто потому, что такова человеческая природа, что при достаточном количестве времени и прозрачности поставленных целей, эти цели будут делаться в последний момент или на них вовсе в итоге забивают. Таким образом я пришёл к планам на месяц, а потом и к планам на неделю и на один день.
+			div.article-body__image
+				img(src="img/article.png", alt="article")
+				span.article-body__image-info Картинка про uiux
+			p.article-body__paragraph Режим цейтнота. Я назваю это так. Последний год я каждый день увеличивал себе нагрузку, чтобы в конечном итоге прийти к режиму, когда каждый день ты должен развиваться, потому что так поставлена мысленная цель на один день. Один день! Никуда не деться, если ставишь себе мысленный барьер на один день. Не будет времени перенести развитие на завтра, через неделю, на конец года и так далее.
+			p.article-body__paragraph Я считаю одним из своих кумиров Стива Джобса. Заслужено за то, что он делал и за то, что он говорил. У многих есть техника Apple? Факт в том, что вы можете бесконечно отрицать, что Apple до смерти Стива Джобса и после — две разные компании. Им удаётся выезжать на тех же рельсах, но это уже не то. Я понял это окончательно, когда купил новый ноутбук. Покупая себе первый компьютер Apple, я открыл коробку и почувствовал этот запах. Запах продукции Apple. Особый запах пластика и производства, который был только у них и который был частичкой этого продукта. Я проверялся у психиатра, всё окей. В общем, я открыл новый ноутбук и там ничего, никакого запаха вообще. Я не говорю что продукт плохой, просто частичка магии Джобса ушла! Надо было выговориться, извините.
+			p.article-body__paragraph Фразы. Одна из самых известных фраз звучит как — «Смерть — это лучшее изобретение жизни». Или более подробно, как — «Память о том, что я скоро умру — самый важный инструмент, который помогает мне принимать сложные решения в моей жизни». Вы знаете, что Джобс был неизлечимо болен и рассуждал об этом с точки зрения человека, который понимал, что каждый день может стать для него последним.
+			button.article-body__share Поделиться
+
+	//- Block Recommendations
+	section.recommendations
+		div.recommendations__container
+			span.recommendations__title Другие статьи по тегу:
+			span.recommendations__tags развитие, freelance, html
+			
+			div.recommendations__grid
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article3.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+				//- Article
+				div.article
+					div.article__promo.article__promo--img
+						img(src="img/assets/blog/article2.png", alt="article2")
+					div.article__info
+						h3.article__name Расшифровка доклада Open Epic#6
+						div.article__details
+							span.article__author Сергей Попов
+							span.article__date 1.01.2018
+						p.article__text Ключевое слово в этом предложении — развитие. Но если вдуматься, то фраза состоит из двух частей. Первая из которых гласит — в любой
+						a(href="article.html").article__more Читать далее...
+
+
+

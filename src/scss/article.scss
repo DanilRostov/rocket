@@ -1,19 +1,360 @@
-// Block Main
-.main {
+// Block Breadcrumbs
+.breadcrumbs {
+	margin-top: 40px;
 
 	&__container {
 		@include container320();
 	}
 
-	@media screen and(min-width: 650px) {
+	&__link {
+		font-size: 1.6em;
+		color: $color-grey;
+
+		&--current {
+			font-weight: bold;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
+		}
+
+		&__link {
+			font-size: 2em;
 		}
 	}
 
 	@media screen and(min-width: 1024px) {
 		&__container {
 			@include container1024();
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Article-header
+.article-header {
+	margin-top: 30px;
+
+	&__container {
+		@include container320();
+		position: relative;
+	}
+
+	&__title {
+		font-size: 2.4em;
+		color: $color-grey;
+	}
+
+	&__author,
+	&__date {
+		display: inline-block;
+		margin-top: 25px;
+		margin-right: 10px;
+		font-size: 1.6em;
+		color: $color-grey;
+	}
+
+	&__tags {
+		display: block;
+		font-size: 1.6em;
+		color: $color-grey;
+	}
+
+	@media screen and(min-width: 640px) {
+		&__container {
+			@include container640();
+		}
+
+		&__title {
+			font-size: 2.8em;
+		}
+
+		&__author,
+		&__date,
+		&__tags {
+			font-size: 2em;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+
+		&__title {
+			font-size: 4em;
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Article-promo
+.article-promo {
+	margin-top: 50px;
+	padding: 40px 0;
+	background: $bg-gradient;
+
+	&__container {
+		@include container320();
+		position: relative;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 2.6em;
+	}
+
+	&__planet1 {
+		position: absolute;
+		width: 100px;
+		top: -122px;
+   		right: -22px;
+		z-index: 1;
+	}
+
+	&__planet2 {
+		position: absolute;
+		width: 200px;
+    	top: -102px;
+    	left: -100px;
+		z-index: 1;
+	}
+
+	&__planet3 {
+		position: absolute;
+		width: 200px;
+    	top: 55px;
+    	right: -99px;
+		z-index: 1;
+	}
+
+	@media screen and(min-width: 640px) {
+		& {
+			padding: 50px 0;
+		}
+
+		&__container {
+			@include container640();
+		}
+
+		&__title {
+			font-size: 4.8em;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		& {
+			padding: 80px 0;
+		}
+
+		&__container {
+			@include container1024();
+		}
+
+		&__title {
+			font-size: 7em;
+		}
+
+		&__planet1 {
+		    width: 350px;
+			top: -347px;
+    		right: -100px;
+		}
+
+		&__planet2 {
+			width: 425px;
+    		top: -193px;
+    		left: -259px;
+		}
+
+		&__planet3 {
+			width: 425px;
+    		top: 82px;
+    		right: -221px;
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Article-academy
+.article-academy {
+	padding: 20px 0;
+
+	&__container {
+		@include container320();
+		text-align: right;
+	}
+
+	&__link {
+		display: inline-block;
+
+		& img {
+			width: 170px;
+		}
+	}
+
+	@media screen and(min-width: 640px) {
+		& {
+			padding: 30px 0;
+		}
+
+		&__container {
+			@include container640();
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		& {
+			padding: 40px 0;
+		}
+
+		&__container {
+			@include container1024();
+		}
+
+		&__link {
+
+			& img {
+				width: 220px;
+			}
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Article-body
+.article-body {
+
+	&__container {
+		@include container320();
+	}
+
+	&__paragraph {
+		margin-top: 20px;
+		color: $color-grey;
+		font-size: 1.6em;
+
+		&--first {
+			margin-top: 0;
+		}
+	}
+
+	&__image {
+		margin-top: 20px;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__image-info {
+		margin-top: 10px;
+		display: block;
+		text-align: center;
+		font-size: 1.2em;
+		color: $color-grey;
+	}
+
+	&__share {
+		margin-top: 40px;
+		padding: 0;
+		font-size: 1.6em;
+		color: $color-grey;
+		font-weight: bold;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	@media screen and(min-width: 640px) {
+		&__container {
+			@include container640();
+		}
+
+		&__paragraph {
+			font-size: 2em;
+		}
+
+		&__share {
+			font-size: 2em;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}
+
+// Block Recommendations
+.recommendations {
+	margin-top: 50px;
+
+	&__container {
+		@include container320();
+	}
+
+	&__title {
+		display: block;
+		font-size: 1.6em;
+		color: $color-grey;
+		font-weight: bold;
+	}
+
+	&__tags {
+		display: block;
+		font-size: 1.6em;
+		color: $color-grey;
+	}
+
+	@media screen and(min-width: 640px) {
+		&__container {
+			@include container640();
+		}
+
+		&__title {
+			font-size: 2em;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+
+		&__grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 	}
 

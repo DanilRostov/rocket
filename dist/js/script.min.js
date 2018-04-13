@@ -1,4 +1,4 @@
-$('.header__burger').click(function() {
+$('.burger-checkbox').on('click', function() {
 	$('.header__menu').addClass('header__menu--active');
 	$('.header__container').addClass('header__container--menu-active');
 	$('.header').addClass('header--menu-active');
@@ -7,7 +7,7 @@ $('.header__burger').click(function() {
 	$('.header__burger').addClass('header__burger--active');
 });
 
-$('.header__burger').click(function() {
+$('.burger-checkbox').on('click', function() {
 	if( !$('.burger-checkbox').prop('checked') === true ) {
 		$('.header__burger').removeClass('header__burger--active');
 		$('.burger-checkbox').prop('checked', false);
