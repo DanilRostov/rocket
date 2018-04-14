@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'Done';
-  src: local("done"), url("../fonts/done.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal; }
-
 html {
   overflow-x: hidden; }
 
