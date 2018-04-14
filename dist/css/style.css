@@ -855,7 +855,10 @@ textarea {
     display: block;
     text-align: center;
     color: #707070;
-    font-size: 2.2em; }
+    font-size: 2.2em;
+    overflow: hidden; }
+    .reviews__slide-text--small {
+      font-size: 1.6em; }
   .reviews__slide-author {
     margin-top: 15px;
     display: block;
@@ -1975,6 +1978,8 @@ textarea {
       padding: 60px 50px; }
     .reviews__slide-text {
       font-size: 3.7em; }
+      .reviews__slide-text--small {
+        font-size: 2em; }
     .reviews__slide-author {
       margin-top: 40px;
       font-size: 2em; }
