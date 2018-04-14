@@ -20,6 +20,7 @@ h1, h2, h3, h4, p, ul, li {
   padding: 0; }
 
 .position-fixed {
+  position: fixed;
   overflow: hidden; }
 
 a, a:hover, a:active, a:visited, a:focus,
@@ -679,8 +680,8 @@ textarea {
     text-align: center; }
   .estimate__form-checkbox-pi {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 4px;
+    left: 10px;
     opacity: 0; }
     .estimate__form-checkbox-pi + label {
       position: relative;
@@ -1511,6 +1512,8 @@ textarea {
       width: 49%; }
     .estimate__container {
       padding: 0 40px; }
+    .estimate__form-checkbox-pi {
+      left: 67px; }
     .estimate__form {
       padding: 0 60px 80px; }
       .estimate__form:before {

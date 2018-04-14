@@ -656,8 +656,8 @@
 
 	&__form-checkbox-pi {
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 4px;
+    	left: 10px;
 		opacity: 0;
 
 		& + label {
@@ -727,6 +727,10 @@
 	@media screen and(min-width: 640px) {
 		&__container {
 			@include container640();
+		}
+
+		&__form-checkbox-pi {
+			left: 67px;
 		}
 
 		&__form {
