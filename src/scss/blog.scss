@@ -256,7 +256,9 @@
 		}
 
 		&__grid {
-			flex-direction: row;
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: repeat(2, 1fr);;
 		}
 	}
 
@@ -365,7 +367,23 @@
 
 	@media screen and(min-width: 1024px) {
 		& {
-			width: 48%;
+			
+			&--wide {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+
+			&--tall {
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+
+			&--big {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
 		}
 
 		&__title {
