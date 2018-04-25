@@ -1,0 +1,24 @@
+extends templates/main-tamplate.pug
+
+block title
+	title Rocket - Блог
+
+block menu
+	-var selected = 'статья';
+	+menu(selected)
+
+block page-content
+
+	//- Block main-404
+	section.main-404
+		div.main-404__container
+			div.main-404__title 4
+			img(src="img/planet.svg", alt="planet1").main-404__planet
+			div.main-404__title.main-404__title--right 4
+			div.main-404__text 
+				| К сожалению, тут нет того что вы ищите. 
+				br
+				| Попробуйте снова
+			a(href="index.html").main-404__link На главную
+			img(src="img/space7.png", alt="space1").main-404__space1
+			img(src="img/space8.png", alt="space2").main-404__space2

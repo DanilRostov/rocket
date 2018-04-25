@@ -44,17 +44,23 @@ let postCssPlugins = [
 	objectFitImages(),
 ];
 
-// // Cписок обрабатываемых файлов в указанной последовательности
-// let jsList = [
-// 	'./node_modules/jquery/dist/jquery.min.js',
-// 	'./node_modules/jquery-migrate/dist/jquery-migrate.min.js',
-// 	'./node_modules/svg4everybody/dist/svg4everybody.js',
-// 	'./node_modules/object-fit-images/dist/ofi.js',
-// 	dirs.source + '/js/script.js',
-// ];
+// Cписок обрабатываемых JS файлов в указанной последовательности
+let jsList = [
+	'./node_modules/jquery/dist/jquery.min.js',
+	'./node_modules/jquery-migrate/dist/jquery-migrate.min.js',
+	'./node_modules/svg4everybody/dist/svg4everybody.js',
+	'./node_modules/object-fit-images/dist/ofi.js',
+	'./node_modules/swiper/dist/js/swiper.min.js',
+	dirs.dist + '/js/script.js'
+];
+
+// Cписок обрабатываемых CSS файлов в указанной последовательности
+let cssLibList = [
+	'./node_modules/swiper/dist/css/swiper.min.css'
+]
 
 // Компиляция и обработка CSS
-gulp.task( 'style', () => {
+gulp.task( 'css', () => {
 	return gulp.src( `${dirs.source}/scss/style.scss` )        // какой файл компилировать
 		.pipe( plumber({                                        // при ошибках не останавливаем автоматику сборки
 			errorHandler: function( err ) {
@@ -86,20 +92,18 @@ gulp.task('pug', () => {
 		.pipe( gulp.dest( dirs.dist ) );
 });
 
-// Сборка JS библиотек
-gulp.task('libs-js', function() {
-	return gulp.src('./src/libs/*.js')
-		.pipe(concat('libs.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist/libs'))
-});
-
 // Сборка CSS библиотек
-gulp.task('libs-css', () => {
-	return gulp.src('./src/libs/*.css')
-		.pipe(concat('libs.min.css'))
-		.pipe( cleanCSS() ) 
-		.pipe(gulp.dest('./dist/libs'))
+gulp.task('cssLibs', function () {
+  if(cssLibList.length) {
+    return gulp.src(cssLibList)
+      .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+      .pipe(concat('libs.min.css'))                        // конкатенируем все файлы в один с указанным именем                                     // сжимаем
+      .pipe(gulp.dest(dirs.dist + '/libs'));                 // записываем
+  }
+  else {
+    console.log('CSS библиотеки не обрабатываются');
+    callback();
+  }
 });
 
 // Копирование шрифтов
@@ -109,13 +113,26 @@ gulp.task( 'fonts', () => {
 });
 
 
-// Конкатенация и углификация Javascript
-gulp.task('js', () => {
+// Конкатенация кастомного Javascript
+gulp.task('jsCustom', () => {
 	return gulp.src( `${dirs.source}/js/*.js` )
 		.pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
-		.pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем
-		// .pipe(uglify())                                       // сжимаем
-		.pipe(gulp.dest( `${dirs.dist}/js` ));                 // записываем
+		.pipe(concat('script.js'))                        // конкатенируем все файлы в один с указанным именем                                       // сжимаем
+		.pipe(gulp.dest( `${dirs.dist}/js/` ));                 // записываем
+});
+
+// Конкатенация и углификация Javascript c библиотеками
+gulp.task('js', function () {
+  if(jsList.length) {
+    return gulp.src(jsList)
+      .pipe(plumber({ errorHandler: onError }))             // не останавливаем автоматику при ошибках
+      .pipe(concat('script.min.js'))                        // конкатенируем все файлы в один с указанным именем                                       // сжимаем
+      .pipe(gulp.dest(dirs.dist + '/js'));                 // записываем
+  }
+  else {
+    console.log('Javascript не обрабатывается');
+    callback();
+  }
 });
 
 // Очистка dist перед сборкой
@@ -145,8 +162,8 @@ gulp.task( 'build', ( callback ) => {
 	gulpSequence(
 		'clean',
 		'img',
-		[ 'libs-css', 'libs-js' ],
-		[ 'style', 'fonts', 'js' ],
+		[ 'jsCustom' ],
+		[ 'cssLibs', 'css', 'fonts', 'js' ],
 		'pug',
 		callback
 	);
@@ -167,7 +184,7 @@ gulp.task( 'serve', [ 'build' ], () => {
 	// Слежение за стилями
 	gulp.watch([
 		dirs.source + '/scss/*.scss'
-	], [ 'style' ]);
+	], [ 'css' ]);
 
 	// Слежение за pug
 	gulp.watch([
@@ -182,9 +199,14 @@ gulp.task( 'serve', [ 'build' ], () => {
 	// Слежение за шрифтами
 	gulp.watch(dirs.source + '/fonts/*.{ttf,woff,woff2,eot,svg}', ['watch:fonts']);
 
-	// Слежение за JS
+	// Слежение за кастомным JS
 	gulp.watch([
 		dirs.source + '/js/*.js'
+	], [ 'watch:jsCustom' ]);
+
+	// Слежение за JS
+	gulp.watch([
+		dirs.dist + '/js/*.js'
 	], [ 'watch:js' ]);
 });
 
@@ -192,6 +214,7 @@ gulp.task( 'serve', [ 'build' ], () => {
 gulp.task('watch:pug', ['pug'], reload);
 gulp.task('watch:img', ['img'], reload);
 gulp.task('watch:fonts', ['fonts'], reload);
+gulp.task('watch:jsCustom', ['jsCustom'], reload);
 gulp.task('watch:js', ['js'], reload);
 
 

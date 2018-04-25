@@ -1,0 +1,170 @@
+// Block main-404
+.main-404 {
+	padding: 60px 0 100px;
+
+	&__container {
+		@include container320();
+		text-align: center;
+		position: relative;
+	}
+
+	&__title {
+		display: inline-block;
+		font-size: 9em;
+		font-weight: bold;
+		color: $color-blue;
+
+		&--right {
+			margin-left: 100px;
+		}
+	}
+
+	&__planet {
+		position: absolute;
+		width: 200px;
+		left: 0;
+		right: 0;
+		margin: -5px auto;
+	}
+
+	&__text {
+		margin-top: 30px;
+		font-size: 1.6em;
+		color: $color-blue;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 30px;
+		color: $color-blue;
+		font-size: 1.6em;
+		padding: 10px 30px;
+		text-transform: uppercase;
+		font-weight: bold;
+		border: 3px solid $color-blue;
+
+		&:hover {
+			padding: 13px 33px;
+			color: #fff;
+			background: $bg-gradient;
+			border: none;
+		}
+	}
+
+	&__space1 {
+		position: absolute;
+		width: 1000px;
+		left: -534px;
+    	top: -601px;
+		z-index: -2;
+	}
+
+	&__space2 {
+		position: absolute;
+		width: 1000px;
+		right: -470px;
+    	top: -20px;
+		z-index: -2;
+	}
+
+	@media screen and(min-width: 640px) {
+		& {
+			padding: 160px 0;
+		}
+
+		&__container {
+			@include container640();
+		}
+
+		&__title {
+			font-size: 15em;
+
+			&--right {
+				margin-left: 150px;
+			}
+		}
+
+		&__planet {
+			width: 300px;
+			margin: 10px auto;
+		}
+
+		&__text {
+			margin-top: 60px;
+			font-size: 2.5em;
+		}
+
+		&__link {
+			margin-top: 50px;
+			padding: 15px 40px;
+			font-size: 2.5em;
+
+			&:hover {
+				padding: 18px 43px;
+			}
+		}
+
+		&__space1 {
+			position: absolute;
+			width: 1100px;
+			left: -534px;
+	    	top: -760px;
+			z-index: -2;
+		}
+
+		&__space2 {
+			position: absolute;
+			width: 1100px;
+			right: -470px;
+	    	top: 140px;
+			z-index: -2;
+		}
+	}
+
+	@media screen and(min-width: 1024px) {
+		&__container {
+			@include container1024();
+		}
+
+		&__title {
+			font-size: 25em;
+
+			&--right {
+				margin-left: 250px;
+			}
+		}
+
+		&__planet {
+			width: 500px;
+    		margin: 25px auto;
+		}
+
+		&__text br {
+			display: none;
+		}
+
+		&__link {
+			margin-top: 50px;
+			padding: 15px 40px;
+			font-size: 2.5em;
+		}
+
+		&__space1 {
+			width: 1500px;
+		    left: -618px;
+		    top: -999px;
+		}
+
+		&__space2 {
+			width: 1500px;
+		    right: -570px;
+		    top: 110px;
+		}
+	}
+
+	@media screen and(min-width: 1250px) {
+		&__container {
+			@include container1250();
+		}
+	}
+}

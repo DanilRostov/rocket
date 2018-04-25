@@ -111,15 +111,16 @@
     <div class="estimate__container">
       <h2 class="estimate__title">Работать с нами</h2>
       <h3 class="estimate__subtitle estimate--index__subtitle">Оценим проект любой сложности в течение 24 часов</h3>
-      <form class="estimate__form">
+      <form class="estimate__form" action="/" onsubmit="sendForm()">
+        <div class="estimate__form-acception"> Ваша заявка принята и будет<br>рассмотрена в течение 24 часов</div>
         <input class="estimate__form-input" name="name" type="text" placeholder="Имя" required>
-        <input class="estimate__form-input" name="phone" type="tel" placeholder="Телефон" required>
+        <input class="estimate__form-input" name="number" type="number" placeholder="Телефон" required>
         <input class="estimate__form-input" name="email" type="email" placeholder="E-mail" required>
         <textarea class="estimate__form-comment" name="comment" cols="100" rows="4" placeholder="Опишите Вашу задачу"></textarea>
         <div class="estimate__form-checkbox-box">
           <input class="estimate__form-checkbox-pi" id="checkbox-pi" type="checkbox" required>
           <label class="estimate__form-checkbox-pi-label" for="checkbox-pi"></label><span class="estimate__form-checkbox-pi-text">Я согласен(на) на обработку персональных данных в соответствии с <a class="estimate__form-checkbox-pi-text--link" target="_blank" href="#">Политикой конфиденциальности</a></span></div>
-        <input class="estimate__form-submit" name="submit-form" type="submit" value="Оставить заявку">
+        <input class="estimate__form-submit estimate__form-submit--disabled" name="submit-form" type="submit" value="Оставить заявку" disabled>
       </form>
     </div>
   </section>
@@ -140,11 +141,10 @@
           <a class="menu__link" href="/audit.html" title="аудит">аудит</a>
           <a class="menu__link" href="/blog.html" title="блог">блог</a>
         </div>
-        <a class="footer__order scroll" href="#estimate">оставить заявку</a>
+        <a class="footer__order scroll" href="index.html#estimate">оставить заявку</a>
       </div>
     </div>
   </footer>
-  <script src="libs/libs.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
 
