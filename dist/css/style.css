@@ -1269,7 +1269,7 @@ textarea {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 2em;
+    font-size: 3em;
     color: #fff;
     padding: 15px; }
   .article__name {
@@ -1722,7 +1722,7 @@ textarea {
         padding: 0;
         height: auto; }
     .article__title {
-      font-size: 3em;
+      font-size: 3.5em;
       padding: 20px; }
     .article__text {
       max-height: 40px; }
@@ -2337,7 +2337,7 @@ textarea {
       grid-row-start: 1;
       grid-row-end: 3; }
     .article__title {
-      font-size: 3em;
+      font-size: 4em;
       padding: 30px; }
     .subscription__container {
       width: 100%;
