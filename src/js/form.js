@@ -17,6 +17,6 @@ const sendForm = () => {
 	$('.estimate__form-comment').css('display', 'none');
 	$('.estimate__form-checkbox-box').css('display', 'none');
 	$('.estimate__form-submit').css('display', 'none');
-	$('.estimate__form').css('height', formHeight);
+	$('.estimate__form').css('height', formHeight/2);
 	$('.estimate__form-acception').css('display', 'block');
 };
